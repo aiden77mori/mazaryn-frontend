@@ -1,0 +1,25 @@
+img{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+}
+
+.header{
+    height: 56px;
+    width: 100vw;
+    background: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerRight{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:7%;
+}
