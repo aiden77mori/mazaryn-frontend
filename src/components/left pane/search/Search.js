@@ -4,7 +4,7 @@ import './Search.css'
 function Search(){
     return(
         <div className='search'>
-            <input placeholder={'Search user...'}/>
+            <input className='searchInput' placeholder={'Search user...'}/>
         </div>
     );
 }

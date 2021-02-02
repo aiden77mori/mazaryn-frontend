@@ -23,7 +23,7 @@ function Notifications(){
             <h4>Notifications</h4>
             {notifications.map((notification) => {
                 return(
-                <div>
+                <div className='notification'>
                     <p>{notification.name}</p>
                     <p>{notification.text}</p>
                     {console.log(notification)}
