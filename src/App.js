@@ -12,9 +12,11 @@ function App() {
   return (
     <div className="App">
       <Header pageTitle={pageTitle} userName={userName}/>
-      <LeftPane />
-      <MiddlePane />
-      <RightPane />
+      <div className='body'>
+        <LeftPane />
+        <MiddlePane />
+        <RightPane />  
+      </div>
     </div>
   );
 }

@@ -2,3 +2,11 @@
     height:100vh;
     width:100vw;
 }
+
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:56px;
+}

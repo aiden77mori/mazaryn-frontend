@@ -20,7 +20,16 @@ function Notifications(){
 
     return(
         <div className='notifications'>
-            
+            <h4>Notifications</h4>
+            {notifications.map((notification) => {
+                return(
+                <div>
+                    <p>{notification.name}</p>
+                    <p>{notification.text}</p>
+                    {console.log(notification)}
+                </div>
+                );
+            })}        
         </div>
     );
 }
