@@ -7,7 +7,6 @@ import Search from './search/Search';
 function LeftPane(){
     return(
         <div className='leftPane'>
-            <p>Left pane</p>
             <Search />
             <Notifications />
             <FriendRequests />

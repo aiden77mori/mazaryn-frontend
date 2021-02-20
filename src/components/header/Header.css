@@ -8,12 +8,13 @@ img{
     height: 56px;
     width: 100vw;
     background: none;
-    background-color: transparent;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     position: fixed;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #E9D8FD;
 }
 
 .headerRight{

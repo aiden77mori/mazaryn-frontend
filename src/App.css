@@ -7,5 +7,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top:56px;
+    padding-top:84px;
+    font-size: 15px;
 }
