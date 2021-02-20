@@ -1,0 +1,15 @@
+.profileIdentity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profileIdentity img{
+    height: 168px;
+    width: 168px;
+    border-radius: 50%;
+}
+
+.profileIdentity h4{
+    font-weight: bold;
+}
