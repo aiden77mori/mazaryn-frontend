@@ -1,6 +1,7 @@
 import './MiddlePane.css';
 import React from 'react';
-import Post from './post/Post';
+import Posts from './post/Posts';
+import Profile from './profile/Profile';
 
 function MiddlePane(){
 
@@ -29,13 +30,9 @@ function MiddlePane(){
 
     return(
         <div className='middlePane'>
-            <p>Middle pane</p>
             <div>
-                {posts.map( post => {
-                    return(
-                        <Post key={post.id.toString()} userName={post.userName} text={post.text}/>    
-                    );
-                })}
+                <Profile />
+                <Posts postsList={posts}/>
             </div>
         </div>
     );
