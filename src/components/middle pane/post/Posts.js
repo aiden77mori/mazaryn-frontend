@@ -1,4 +1,6 @@
 import React from 'react';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import SubjectIcon from '@material-ui/icons/Subject';
 import './Post.css'
 
 function Posts(props){
@@ -18,10 +20,17 @@ function Posts(props){
 function Post(props){
     return(
         <div className='post'>
-            <h4>{props.userName}</h4>
+            {/* Dynamically set the profile image*/}
+            <figure>
+                <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage'/>
+                <figcaption>
+                    {props.userName}
+                </figcaption>    
+            </figure>
             <p>{props.text}</p>
             <div className='icons'>
-                
+                <FavoriteBorderIcon />
+                <SubjectIcon />
             </div>
         </div>
     );

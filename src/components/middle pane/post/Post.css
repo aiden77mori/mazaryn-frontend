@@ -21,3 +21,29 @@
 .post h4{
     margin-bottom: 10px;
 }
+
+.post img{
+    height:28px;
+    width: 28px;
+    border-radius: 50%;
+}
+
+figure{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    align-items: center;
+}
+
+figure figcaption{
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.icons{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:10px;
+}
