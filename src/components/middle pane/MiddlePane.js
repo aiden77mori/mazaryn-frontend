@@ -30,10 +30,7 @@ function MiddlePane(){
 
     return(
         <div className='middlePane'>
-            <div>
-                <Profile/>
-                <Posts postsList={posts}/>
-            </div>
+            <Posts postsList={posts}/>
         </div>
     );
 }

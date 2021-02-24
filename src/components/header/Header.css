@@ -1,4 +1,4 @@
-img{
+/* img{
     height: 28px;
     width: 28px;
     border-radius: 50%;
@@ -22,4 +22,54 @@ img{
     flex-direction: row;
     justify-content: space-around;
     width:167px;
+} */
+
+/*
+    Ovarall header style
+*/
+.header{
+    height:53px;
+    width: 100%;
+    padding: 0 5px;
+    border-bottom:1px solid #e9d8fd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed;
+    z-index: 3;
+}
+
+.orgName{
+    display: none;
+}
+
+
+/*
+    Left content css
+*/
+.left{
+    width: 22%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.profile p{
+    font-weight: bold;
+    display: none;
+}
+
+.pageTitle{
+    font-weight: bold;
+    font-size: medium;
+    display: flex;
+    align-items: center;
 }

@@ -1,7 +1,23 @@
-.post{
+/* .post{
     margin-top : 35px;
     margin-bottom: 35px;
     border: 1px solid #e8d9fd;
     border-radius: 15px;
     padding: 15px;
+} */
+
+.posts{
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top:1px solid #e9d8fd;
+    border-bottom:1px solid #e9d8fd;
+}
+
+.post h4{
+    margin-bottom: 10px;
 }

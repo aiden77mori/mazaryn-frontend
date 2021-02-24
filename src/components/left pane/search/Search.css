@@ -1,7 +1,37 @@
-.searchInput{
+/* .searchInput{
     border:none;
     background-color: #E9D8FD;
     width: 272px;
     height: 40px;
     border-radius: 64px ;
+} */
+
+/*
+    input search
+*/
+.searchInput{
+    height: 28px;
+    width: 50%;
+    border-style: none;
+    background-color: #e9d8fd;
+    border-radius: 64px;
 }
+
+/*
+    Hiding the placeholder text
+*/
+::-webkit-input-placeholder {
+    color:transparent;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color:transparent; 
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color:transparent; 
+ }
+ 
+ :-ms-input-placeholder {  
+    color:transparent;
+ }

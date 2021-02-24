@@ -1,3 +1,7 @@
-.leftPane{
+/* .leftPane{
     width: 350px;
+} */
+
+.leftPane{
+    display: none;
 }

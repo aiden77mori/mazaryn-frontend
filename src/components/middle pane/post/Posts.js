@@ -20,6 +20,9 @@ function Post(props){
         <div className='post'>
             <h4>{props.userName}</h4>
             <p>{props.text}</p>
+            <div className='icons'>
+                
+            </div>
         </div>
     );
 }
