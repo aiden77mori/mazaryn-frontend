@@ -6,7 +6,7 @@ import RightPane from './components/right pane/RightPane';
 
 function App() {
 
-  let pageTitle = 'Home';
+  let pageTitle = 'Zaryn group';
   let userName = 'Teddy';
 
   return (

@@ -27,11 +27,15 @@ function Post(props){
                     {props.userName}
                 </figcaption>    
             </figure>
-            <p>{props.text}</p>
-            <div className='icons'>
-                <FavoriteBorderIcon />
-                <SubjectIcon />
-            </div>
+            <section className='content'>
+                <p>{props.text}</p>
+            </section>
+            <section className='bottom'>
+                <div className='icons'>
+                    <FavoriteBorderIcon />
+                    <SubjectIcon />
+                </div>
+            </section>
         </div>
     );
 }

@@ -9,29 +9,23 @@
 /*
     input search
 */
-.searchInput{
+.search{
     height: 28px;
-    width: 50%;
-    border-style: none;
-    background-color: #e9d8fd;
+    width: 60%;
     border-radius: 64px;
+    padding-left: 10px;
+    margin-right: 5%;
+    background-color: #e9d8fd;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-/*
-    Hiding the placeholder text
-*/
-::-webkit-input-placeholder {
-    color:transparent;
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    color:transparent; 
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    color:transparent; 
- }
- 
- :-ms-input-placeholder {  
-    color:transparent;
- }
+.searchInput{
+    height: 28px;
+    width: 100%;
+    border-style: none;
+    background: none;
+}

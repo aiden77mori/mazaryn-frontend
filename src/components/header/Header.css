@@ -30,7 +30,6 @@
 .header{
     height:53px;
     width: 100%;
-    padding: 0 5px;
     border-bottom:1px solid #e9d8fd;
     display: flex;
     flex-direction: row;
@@ -50,10 +49,9 @@
     Left content css
 */
 .left{
-    width: 22%;
+    width: 40%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .profile img{
@@ -72,4 +70,16 @@
     font-size: medium;
     display: flex;
     align-items: center;
+    margin-left: 5%;
+}
+
+/*
+    Right content css
+*/
+
+.right{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }

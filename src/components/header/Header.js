@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import Search from '../left pane/search/Search';
+import MenuIcon from '@material-ui/icons/Menu';
 
 function Header(props){
 
@@ -16,6 +17,7 @@ function Header(props){
             </div>        
             <div className='right'>
                 <Search />
+                <MenuIcon />
             </div>
         </div>
     );

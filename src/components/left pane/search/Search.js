@@ -1,9 +1,13 @@
-import React from 'react'
-import './Search.css'
+import React from 'react';
+import './Search.css';
+import SearchIcon from '@material-ui/icons/Search';
 
 function Search(){
     return(
-        <input className='searchInput' placeholder={'Search user...'}/>    
+        <div className='search'>
+            <input className='searchInput' placeholder={'Search'}/>
+            <SearchIcon />    
+        </div>
     );
 }
 
