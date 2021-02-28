@@ -63,3 +63,9 @@ figure figcaption{
 .content p{
     width: 80%;
 }
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
