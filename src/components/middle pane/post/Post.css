@@ -28,14 +28,14 @@
     border-radius: 50%;
 }
 
-figure{
+.post figure{
     display: flex;
     flex-direction: row;
     width: 45%;
     align-items: center;
 }
 
-figure figcaption{
+.post figcaption{
     font-weight: bold;
     margin-left: 5%;
 }

@@ -6,4 +6,7 @@ footer{
     justify-content: center;
     align-items: center;
     border-top: 1px solid #e9d8fd;
+    font-size: 10px;
+
+    margin-top: auto;
 }

@@ -17,3 +17,20 @@
 .profileIdentity h4{
     font-weight: bold;
 } */
+
+.profile figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile figure img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.profile figcaption{
+    margin-top:15px;
+    font-weight: bold;
+}

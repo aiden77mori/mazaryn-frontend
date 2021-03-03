@@ -9,7 +9,7 @@ function Header(props){
         <div className='header'>
             <h2 className='orgName'>Mazaryn Social</h2>
             <div className='left'>
-                <div className='profile'>
+                <div className='headerProfile'>
                     <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage'/>
                     <p>{props.userName}</p>
                 </div>
