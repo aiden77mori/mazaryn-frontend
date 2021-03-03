@@ -1,5 +1,8 @@
 import React from 'react';
 import './Profile.css';
+import EditIcon from '@material-ui/icons/Edit';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
+import GroupIcon from '@material-ui/icons/Group';
 
 function Profile(){
 
@@ -11,6 +14,25 @@ function Profile(){
                     Teddy Mbugua
                 </figcaption>    
             </figure>
+            <FooterMenu />
+        </div>
+    );
+}
+
+function FooterMenu(){
+    return(
+        <div className='footerMenu'>
+            <ul>
+                <li>
+                    <EditIcon />
+                </li>
+                <li>
+                    <GroupIcon />
+                </li>
+                <li>
+                    <ChatBubbleIcon />
+                </li>
+            </ul>
         </div>
     );
 }
