@@ -1,9 +1,13 @@
 import React from 'react'
+import Header from '../lib/components/Header/Header'
 
 const Home = () => {
   return (
     <div>
-      this is for all posts page
+      <Header />
+        <div>
+          <h2>this is for all posts page</h2>
+        </div>
     </div>
   )
 }
