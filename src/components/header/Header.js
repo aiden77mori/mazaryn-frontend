@@ -1,26 +1,17 @@
 import React from 'react';
-import './Header.css'
-import Search from '../left pane/search/Search';
-import MenuIcon from '@material-ui/icons/Menu';
+import ProfileImg from '../../lib/assets/img/profile.svg'
 
-function Header(props){
-
-    return(
-        <div className='header'>
-            <h2 className='orgName'>Mazaryn Social</h2>
-            <div className='left'>
-                <div className='headerProfile'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage'/>
-                    <p>{props.userName}</p>
-                </div>
-                <h3 className='pageTitle'>{props.pageTitle}</h3>
-            </div>        
-            <div className='right'>
-                <Search />
-                <MenuIcon />
-            </div>
-        </div>
-    );
+const Header = () => {
+  return (
+    <div className="border-b border-gray-200 py-6 px-32 capitalize flex justify-between items-center">
+      <a href="/" className="font-semibold text-2xl">mazaryn social</a>
+      <h4 className="font-semibold text-lg">Home</h4>
+      <div className="flex justify-between items-center">
+        <img src={ProfileImg} alt="profile-img" />
+        <h5 className="pl-8">Teddy</h5>
+      </div>
+    </div>
+  )
 }
 
 export default Header;

@@ -1,13 +1,9 @@
 .App{
-    min-height:100vh;
-    width:100%;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #middlePane{
     width: 100%;
-    margin-top:15%;
 }
 
 /* .body{

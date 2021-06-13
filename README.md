@@ -42,6 +42,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 ## Contributors
 
 * [@Teddy Mbugua](https://github.com/tbm5k) 📖
+* [@Obinna Leo](https://github.com/Daltimore) 📖
 
 ## License
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
