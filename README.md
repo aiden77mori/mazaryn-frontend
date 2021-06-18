@@ -6,7 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/mazarynxyz/mazaryn-frontend?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/mazaryn?style=social)
 
-Mazaryn Social is a `social platform` that allows `users` to do `engage with each other while they earn Zaryn coins`.
+Mazaryn Social is a `social platform` that allows `users` to do `engage with each other while they earn ZARYN coins`.
 
 ## Prerequisites
 
