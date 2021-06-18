@@ -4,6 +4,7 @@ import './signUp.css'
 function signUp(){
     return(
         <div className='sign-up-container'>
+            <h2>Sign up to Mazaryn</h2>
             <form>
                 <div className='input'>
                     <label for="email">Email</label>
