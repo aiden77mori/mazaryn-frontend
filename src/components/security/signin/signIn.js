@@ -3,7 +3,7 @@ import './signIn.css'
 
 function signIn(){
     return(
-        <div className='sign-up-container'>
+        <div className='sign-in-container'>
             <h2>Sign in to Mazaryn</h2>
             <form>
                 <div className='input'>
@@ -15,7 +15,7 @@ function signIn(){
                     <input type="password" name="password" id="password" placeholder="******" />
                 </div>
             </form>
-            <button class="sign-up-btn">Sign in</button>
+            <button class="sign-in-btn">Sign in</button>
             <div class="sign-in">
                 <a href="#">Sign up</a>
             </div>

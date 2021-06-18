@@ -15,16 +15,6 @@ function App() {
           <Route path='/signup' component={SignUp}/>
         </Switch>
       </Router>
-
-      {
-      /*
-      <Router>
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-          </Switch>
-        </Router>
-      */
-      }
     </div>
   );
 }
