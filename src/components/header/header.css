@@ -5,16 +5,20 @@
 */
 
 #header{
-    height:3.125rem;
+    height: 3.125rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding: .8rem 4.1875rem;
     justify-content: center;
     font-size: 0.9375rem;
-}
+    background-color: #fff;}
 
 #header{
     box-shadow: 0 4px 12px rgba(232, 217, 253, .5);
+    position: fixed;
+    top: 0;
+    z-index: 3;
 }
 
 #header > div{
@@ -38,7 +42,8 @@
 }
 
 #profile > img{
-    width: 10%;
+    width: 1.625rem;
+    height: 1.625rem;
 }
 
 #left{

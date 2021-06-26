@@ -1,13 +1,11 @@
 import './LeftPane.css';
 import React from 'react';
-import Notifications from './notifications/Notifications'
-import FriendRequests from './friend requests/FriendRequests';
+import Search from './search/Search.js';
 
 function LeftPane(){
     return(
         <div className='leftPane'>
-            <Notifications />
-            <FriendRequests />
+            <Search />
         </div>
     );
 }

@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 function Search(){
     return(
         <div className='search'>
-            <input className='searchInput' placeholder={'Search'}/>
+            <input className='searchInput' placeholder={''}/>
             <SearchIcon />    
         </div>
     );

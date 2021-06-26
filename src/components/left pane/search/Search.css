@@ -10,8 +10,8 @@
     input search
 */
 .search{
-    height: 28px;
-    width: 60%;
+    height: 2.5rem;
+    max-width: 3.125rem;
     border-radius: 64px;
     padding-left: 10px;
     margin-right: 5%;
