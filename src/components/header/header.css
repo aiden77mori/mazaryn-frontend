@@ -1,0 +1,47 @@
+/*
+*
+*Styles to the header
+*
+*/
+
+#header{
+    height:3.125rem;
+    display: flex;
+    flex-direction: row;
+    padding: .8rem 4.1875rem;
+    justify-content: center;
+    font-size: 0.9375rem;
+}
+
+#header{
+    box-shadow: 0 4px 12px rgba(232, 217, 253, .5);
+}
+
+#header > div{
+    width: 33.33%;
+}
+
+#profile{
+    display: flex;
+    flex-direction: row;
+}
+
+#center{
+    text-align: center;
+    font-weight: bold;
+}
+
+.userName{
+    width: 90%;
+    padding-right: .8rem;
+    text-align: right;
+}
+
+#profile > img{
+    width: 10%;
+}
+
+#left{
+    font-size: 1.1875rem;
+    font-weight: bold;
+}
