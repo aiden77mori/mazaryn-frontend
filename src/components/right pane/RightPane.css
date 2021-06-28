@@ -6,6 +6,7 @@
     border-radius: 64px;
 } */
 
-.rightPane{
-    display: none;
+.rightPane{    
+    width: 29%;
+    height: 100%;
 }

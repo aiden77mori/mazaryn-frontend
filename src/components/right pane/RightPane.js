@@ -4,7 +4,7 @@ import React from 'react';
 function RightPane(){
     return(
         <div className='rightPane'>
-            <button className='postButton'>Post</button>
+            <button className='postButton'>Post btn</button>
         </div>
     );
 }
