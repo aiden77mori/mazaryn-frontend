@@ -6,7 +6,9 @@ function Search(){
     return(
         <div className='search'>
             <input className='searchInput' placeholder={''}/>
-            <SearchIcon />    
+            <div className='searchIcon'>
+                <SearchIcon />    
+            </div>
         </div>
     );
 }
