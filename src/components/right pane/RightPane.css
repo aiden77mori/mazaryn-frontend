@@ -34,4 +34,6 @@ ul > li{
     border-radius: 50%;
     background-color: #e9d8fd;
     margin-bottom: 1.625rem;
+    margin-left: auto;
+    margin-right: auto;
 }
