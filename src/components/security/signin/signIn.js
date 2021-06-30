@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './signIn.css'
 
-function signIn(){
+function SignIn(){
+
+    const [credentials, setCredentials] = useState({
+        email: 'example@gmail.com',
+        password: '****'
+    });
+
     return(
         <div className='sign-in-container'>
             <h2>Sign in to Mazaryn</h2>
             <form>
                 <div className='input'>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="example@gmail.com"/>
+                    <input type="email" name="email" id="email" value={credentials.email}/>
                 </div>
                 <div className='input'>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="******" />
+                    <input type="password" name="password" id="password" value={credentials.password} />
                 </div>
             </form>
-            <button class="sign-in-btn">Sign in</button>
+            <button className="sign-in-btn">Sign in</button>
             <div class="sign-in">
                 <a href="#">Sign up</a>
             </div>
@@ -23,4 +29,4 @@ function signIn(){
     );
 }
 
-export default signIn;
+export default SignIn;
