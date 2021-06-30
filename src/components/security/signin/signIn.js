@@ -22,8 +22,8 @@ function SignIn(){
     function handleChange(e){
         if(e.target.type === 'email'){
             setEmail(e.target.value);
-        }else{
-            setPassword
+        }else if(e.target.type === 'password'){
+            setPassword(e.target.value)
         }
     }
 
