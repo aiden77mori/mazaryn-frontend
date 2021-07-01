@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import './signIn.css'
+import './signIn.css';
+import {useHistory} from 'react-router-dom';
 
 function SignIn(){
 
@@ -18,6 +19,7 @@ function SignIn(){
 
     const [email, setEmail] = useState('example@gmail.com');
     const [password, setPassword] = useState('pass');
+    let history = useHistory();
 
     function handleChange(e){
         if(e.target.type === 'email'){
@@ -31,6 +33,7 @@ function SignIn(){
         e.preventDefault();
         //access values with "e.target.email.value and e.target.password.value"
         //logic to send data to the backend server
+        history.push("/view");
     }
 
     return(

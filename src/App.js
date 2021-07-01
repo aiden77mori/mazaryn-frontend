@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import SignUp from './components/security/signup/SignUp.js';
 import SignIn from './components/security/signin/SignIn.js';
 
-//import View from './components/view/view.js';
+import View from './components/view/View.js';
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={SignIn}/>
           <Route path='/signup' component={SignUp}/>
+          <Route path='/view' component={View} />
         </Switch>
       </Router>
       {
