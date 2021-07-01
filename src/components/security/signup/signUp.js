@@ -17,10 +17,21 @@ function SignUp(){
         }
     }
 
+    function handleSubmit(e){
+        e.preventDefault();
+        
+        //a test object show bug
+        let obj = {
+            email : e.target.email.value,
+            password: e.target.password.value
+        }
+        console.log(`${obj.email} ${obj.confirmPassword}`);
+    }
+
     return(
         <div className='sign-up-container'>
             <h2>Sign up to Mazaryn</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className='input'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" value={email} onChange={handleChange}/>
@@ -33,11 +44,12 @@ function SignUp(){
                     <label htmlFor="confirm-password">Confirm password</label>
                     <input type="password" name="confirm-password" id="confirm-password" value={confirmPassword} onChange={handleChange}/>
                 </div>
+                <button className="sign-up-btn" type="submit">Sign up</button>
             </form>
-            <button className="sign-up-btn">Sign up</button>
             <div className="sign-in">
                 <a href="#">Sign in</a>
             </div>
+            
         </div>
     );
 }
