@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './signIn.css';
-import {useHistory} from 'react-router-dom';
+//import {useHistory} from 'react-router-dom';
+//import { Details } from '@material-ui/icons';
 
-function SignIn(){
+function SignIn({login}){
 
     /*
     *using an object in the useState function results in an error 
@@ -17,15 +18,32 @@ function SignIn(){
     * 
     */
 
-    const [email, setEmail] = useState('example@gmail.com');
-    const [password, setPassword] = useState('pass');
-    let history = useHistory();
+    //const [email, setEmail] = useState('example@gmail.com');
+    //const [password, setPassword] = useState('pass');
+    //let history = useHistory();
+    //
+    //if(e.target.type === 'email'){
+    //    setEmail(e.target.value);
+    //}else if(e.target.type === 'password'){
+    //    setPassword(e.target.value)
+    //}
+
+    const [credentials, setCredentials] = useState({
+        email: '',
+        password: ''
+    });
 
     function handleChange(e){
-        if(e.target.type === 'email'){
-            setEmail(e.target.value);
-        }else if(e.target.type === 'password'){
-            setPassword(e.target.value)
+        if(e.target.name === "email"){
+            setCredentials({
+                ...credentials, 
+                email: e.target.value
+            });
+        } else {
+            setCredentials({
+                ...credentials, 
+                password: e.target.value
+            });
         }
     }
 
@@ -33,7 +51,8 @@ function SignIn(){
         e.preventDefault();
         //access values with "e.target.email.value and e.target.password.value"
         //logic to send data to the backend server
-        history.push("/view");
+        //history.push("/view");
+        login("Logged in")
     }
 
     return(
@@ -42,11 +61,11 @@ function SignIn(){
             <form onSubmit={handleSubmit}>
                 <div className='input'>
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="email" value={email} onChange={handleChange}/>
+                    <input type="email" name="email" id="email" value={credentials.email} onChange={handleChange}/>
                 </div>
                 <div className='input'>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" value={password} onChange={handleChange}/>
+                    <input type="password" name="password" id="password" value={credentials.password} onChange={handleChange}/>
                 </div>
                 <button className="sign-in-btn" type="submit">Sign in</button>
             </form>
