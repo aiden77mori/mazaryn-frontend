@@ -23,6 +23,9 @@
 form {
     position: absolute;
     top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input{
@@ -48,8 +51,6 @@ form label {
 }
 
 .sign-in-container button {
-    position: absolute;
-    bottom: 120px;
     width: 250px;
     height: 45px; 
     background: #43E152;

@@ -27,10 +27,15 @@ function SignIn(){
         }
     }
 
+    function handleSubmit(e){
+        e.preventDefault();
+        console.log(`form submited ${e.target.value}`)
+    }
+
     return(
         <div className='sign-in-container'>
             <h2>Sign in to Mazaryn</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className='input'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" value={email} onChange={handleChange}/>
@@ -39,10 +44,8 @@ function SignIn(){
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" id="password" value={password} onChange={handleChange}/>
                 </div>
+                <button className="sign-in-btn" type="submit">Sign in</button>
             </form>
-            <button className="sign-in-btn" type="submit">
-                Sign in
-            </button>
             <div className="sign-in">
                 <a href="#">Sign up</a>
             </div>
