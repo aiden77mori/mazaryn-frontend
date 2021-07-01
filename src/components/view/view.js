@@ -4,7 +4,7 @@ import Header from '../header/Header';
 import LeftPane from '../left pane/LeftPane';
 import RightPane from '../right pane/RightPane.js';
 
-function view(){
+function View(){
     return(
         <div id='view'>
             <Header />
@@ -19,4 +19,4 @@ function view(){
     )
 }
 
-export default view
+export default View
