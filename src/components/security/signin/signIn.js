@@ -29,7 +29,8 @@ function SignIn(){
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(`form submited ${e.target.value}`)
+        //access values with "e.target.email.value and e.target.password.value"
+        //logic to send data to the backend server
     }
 
     return(
