@@ -8,6 +8,8 @@ import SignIn from './components/security/signin/SignIn.js';
 import View from './components/view/View.js';
 
 
+let loggedin = false
+
 function App() {
 
   //Dummy user object acting as our DB
@@ -18,8 +20,7 @@ function App() {
 
   //state of the user stored for the session
   const [userDetails, setUserDetails] = useState({
-    email: '',
-    loggedIn: false
+    email: ''
   });
 
   const [error, setError] = useState('');
@@ -29,9 +30,9 @@ function App() {
     //check if the details provided by the user using form matches the data in the DB
     if((details.email == user.email) && (details.password == user.password)){
       setUserDetails({
-        email: details.email,
-        loggedIn: true
+        email: details.email
       });  
+      loggedin = true
       console.log("Logged in");
     }else{
       console.log("credentials dont match")
@@ -42,16 +43,16 @@ function App() {
   function logout(){
     setUserDetails({
       email:'',
-      password: '',
-      loggedIn: false 
+      password: '' 
     });
+    loggedin = false
   }
 
   return (
     <div className="App">
 
       {
-         (userDetails.loggedIn === true ) ? (
+         (loggedin === true ) ? (
            <View logout={logout}/>
          ) : (
            <SignIn login={login} error={error}/>
