@@ -3,7 +3,7 @@ import './signIn.css';
 //import {useHistory} from 'react-router-dom';
 //import { Details } from '@material-ui/icons';
 
-function SignIn({login}){
+function SignIn({login, error}){
 
     const [credentials, setCredentials] = useState({
         email: '',
@@ -29,6 +29,9 @@ function SignIn({login}){
         <div className='sign-in-container'>
             <h2>Sign in to Mazaryn</h2>
             <form onSubmit={handleSubmit}>
+                {
+                (error != '') ? (<p>{error}</p>): ("")
+                }
                 <div className='input'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" value={credentials.email} onChange={handleChange}/>

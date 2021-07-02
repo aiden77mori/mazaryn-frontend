@@ -22,6 +22,8 @@ function App() {
     loggedIn: false
   });
 
+  const [error, setError] = useState('');
+
   function login(details){
 
     //check if the details provided by the user using form matches the data in the DB
@@ -31,8 +33,10 @@ function App() {
         loggedIn: true
       });  
       console.log("Logged in");
-    }
-    console.log("credentials dont match")
+    }else{
+      console.log("credentials dont match")
+      setError("Credentials do not match");
+    }  
   }
 
   function logout(){
@@ -50,7 +54,7 @@ function App() {
          (userDetails.loggedIn === true ) ? (
            <View logout={logout}/>
          ) : (
-           <SignIn login={login}/>
+           <SignIn login={login} error={error}/>
          )
       }
 
