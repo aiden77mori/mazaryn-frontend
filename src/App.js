@@ -10,23 +10,37 @@ import View from './components/view/View.js';
 
 function App() {
 
+  //Dummy user object acting as our DB
   let user = {
     email : 'example@gmail.com',
-    password: 'password'
+    password: 'example'
   }
 
+  //state of the user stored for the session
   const [userDetails, setUserDetails] = useState({
     email: '',
-    password: '',
     loggedIn: false
   });
 
   function login(details){
-    console.log(details)
+
+    //check if the details provided by the user using form matches the data in the DB
+    if((details.email == user.email) && (details.password == user.password)){
+      setUserDetails({
+        email: details.email,
+        loggedIn: true
+      });  
+      console.log("Logged in");
+    }
+    console.log("credentials dont match")
   }
 
   function logout(){
-    console.log("Logged out")
+    setUserDetails({
+      email:'',
+      password: '',
+      loggedIn: false 
+    });
   }
 
   return (
@@ -34,7 +48,7 @@ function App() {
 
       {
          (userDetails.loggedIn === true ) ? (
-           <View />
+           <View logout={logout}/>
          ) : (
            <SignIn login={login}/>
          )

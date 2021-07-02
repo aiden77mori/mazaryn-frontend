@@ -4,7 +4,7 @@ import Header from '../header/Header';
 import LeftPane from '../left pane/LeftPane';
 import RightPane from '../right pane/RightPane.js';
 
-function View(){
+function View({logout}){
     return(
         <div id='view'>
             <Header />
@@ -13,7 +13,7 @@ function View(){
                 <section id='middle'>
                     middle section
                 </section>
-                <RightPane />
+                <RightPane logout={logout}/>
             </div>
         </div>
     )

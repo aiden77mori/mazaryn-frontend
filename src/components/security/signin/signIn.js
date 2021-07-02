@@ -5,46 +5,16 @@ import './signIn.css';
 
 function SignIn({login}){
 
-    /*
-    *using an object in the useState function results in an error 
-    *"A component is changing an uncontrolled input of type text to be controlled" while changing 
-    *the input value
-    *
-    * const [credentials, setCredentials] = useState({
-    *   email: '',
-    *   password: ''
-    * });
-    * 
-    * 
-    */
-
-    //const [email, setEmail] = useState('example@gmail.com');
-    //const [password, setPassword] = useState('pass');
-    //let history = useHistory();
-    //
-    //if(e.target.type === 'email'){
-    //    setEmail(e.target.value);
-    //}else if(e.target.type === 'password'){
-    //    setPassword(e.target.value)
-    //}
-
     const [credentials, setCredentials] = useState({
         email: '',
         password: ''
     });
 
     function handleChange(e){
-        if(e.target.name === "email"){
-            setCredentials({
-                ...credentials, 
-                email: e.target.value
-            });
-        } else {
-            setCredentials({
-                ...credentials, 
-                password: e.target.value
-            });
-        }
+        setCredentials({
+            ...credentials,
+            [e.target.name]: e.target.value
+        });
     }
 
     function handleSubmit(e){
@@ -52,7 +22,7 @@ function SignIn({login}){
         //access values with "e.target.email.value and e.target.password.value"
         //logic to send data to the backend server
         //history.push("/view");
-        login("Logged in")
+        login(credentials)
     }
 
     return(
