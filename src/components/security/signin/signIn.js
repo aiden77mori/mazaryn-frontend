@@ -30,7 +30,7 @@ function SignIn({login, error}){
             <h2>Sign in to Mazaryn</h2>
             <form onSubmit={handleSubmit}>
                 {
-                (error != '') ? (<p>{error}</p>): ("")
+                (error !== '') ? (<p>{error}</p>): ("")
                 }
                 <div className='input'>
                     <label htmlFor="email">Email</label>
