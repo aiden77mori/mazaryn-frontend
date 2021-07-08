@@ -5,8 +5,8 @@ export const UserContext = createContext();
 export function UserProvider(props){
 
     const [loggedUser, setLoggedUser] = useState({
-        userName: 'Teddy',
-        email: 'example@gmail.com',
+        userName: '',
+        email: '',
         isLoggedIn: false
     });
 

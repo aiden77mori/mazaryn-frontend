@@ -3,7 +3,7 @@ import './App.css';
 import { UserContext, UserProvider } from './components/context/UserContext';
 import SignIn from './components/security/signin/SignIn.js';
 import View from './components/view/View.js';
-import User from './components/context/User'
+import Auth from './components/security/Auth'
 
 function App() {
 
@@ -51,7 +51,7 @@ function App() {
     <div className="App">
 
       <UserProvider>
-        <User />
+        <Auth />
       </UserProvider>
      
       {

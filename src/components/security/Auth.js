@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { UserContext } from './UserContext';
+import { UserContext } from '../context/UserContext';
 
-function User(){
+function Auth(){
 
     const [loggedUser, setLoggedUser] = useContext(UserContext);
 
@@ -12,4 +12,4 @@ function User(){
     );
 }
 
-export default User;
+export default Auth;
