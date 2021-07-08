@@ -1,10 +1,17 @@
-import React, { createContext } from 'react'
+import React, { useState, createContext } from 'react'
 
 export const UserContext = createContext();
 
-export const UserProvider = props => {
+export function UserProvider(props){
+
+    const [loggedUser, setLoggedUser] = useState({
+        userName: 'Teddy',
+        email: 'example@gmail.com',
+        isLoggedIn: false
+    });
+
     return(
-        <UserContext.Provider value={'hello'}>
+        <UserContext.Provider value={[loggedUser, setLoggedUser]}>
             {props.children}
         </UserContext.Provider>
     );

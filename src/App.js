@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import './App.css';
-import { UserContext } from './components/context/UserContext';
+import { UserContext, UserProvider } from './components/context/UserContext';
 import SignIn from './components/security/signin/SignIn.js';
 import View from './components/view/View.js';
+import User from './components/context/User'
 
 function App() {
 
@@ -49,8 +50,10 @@ function App() {
   return (
     <div className="App">
 
-      <h1>{value}</h1>
-
+      <UserProvider>
+        <User />
+      </UserProvider>
+     
       {
         //  (userDetails.loggedin === true ) ? (
         //    <View logout={logout}/>
