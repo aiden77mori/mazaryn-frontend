@@ -3,7 +3,7 @@ import './App.css';
 import { UserContext, UserProvider } from './components/context/UserContext';
 import SignIn from './components/security/signin/SignIn.js';
 import View from './components/view/View.js';
-import Auth from './components/security/Auth'
+import Auth from './components/security/a'
 
 function App() {
 
