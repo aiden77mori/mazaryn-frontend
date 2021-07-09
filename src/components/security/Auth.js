@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { UserContext } from '../context/UserContext';
 import SignIn from './signin/SignIn';
 import View from '../view/View';
@@ -15,7 +15,22 @@ function Auth(){
     }
 
     const [loggedUser, setLoggedUser] = useContext(UserContext);
+    const [isAuthenticated, userHasAuthenticated] = useState(true);
     const [error, setError] = useState('');
+
+    //the effect checks state of the authentication when the app first loads
+    useEffect(() => {
+        onLoad();
+    })
+
+    //this function tries to retrieve a session obj, if there exists, the authenticated state is set to true 
+    function onLoad(){
+        if(loggedUser.isLoggedIn === false){
+            userHasAuthenticated(false);
+        } else {
+            userHasAuthenticated(true) 
+        }
+    }
 
     function login(details){
         //check if the details provided by the user using form matches the data in the DB
@@ -43,7 +58,7 @@ function Auth(){
     return(
         <div>
             {
-                (loggedUser.isLoggedIn === true ) ? (
+                (isAuthenticated === true ) ? (
                     <View logout={logout}/>
                 ) : (
                     <SignIn login={login} error={error}/>
