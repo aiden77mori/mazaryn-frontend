@@ -6,6 +6,8 @@ import LeftPane from '../left pane/LeftPane';
 import RightPane from '../right pane/RightPane.js';
 import Posts from '../middle pane/post/Posts';
 import Profile from '../middle pane/profile/Profile';
+import Feed from '../middle pane/feed/Feed';
+import { FeedProvider } from '../context/FeedContext';
 
 function View({logout}){
     return(
@@ -14,12 +16,15 @@ function View({logout}){
             <div className='section'>
                 <LeftPane />
                 <section id='middle'>
-                    <Router>
-                        <Switch>
-                            <Route exact path='/' component={Posts}/>
-                            <Route path='/profile' component={Profile} />
-                        </Switch>
-                    </Router>
+                    <FeedProvider>
+                        <Router>
+                            <Switch>
+                                <Route exact path='/' component={Feed}/>
+                                <Route path='/profile' component={Profile} />
+                                <Route path='/group' component={Posts}/>
+                            </Switch>
+                        </Router>
+                    </FeedProvider>
                 </section>
                 <RightPane logout={logout}/>
             </div>
