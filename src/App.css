@@ -1,5 +1,6 @@
 .App{
     font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
     height: 100vh;
     background-color: thistle;
 }
