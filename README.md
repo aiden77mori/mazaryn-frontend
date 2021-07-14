@@ -19,6 +19,7 @@ Before you begin, ensure you have met the following requirements:
 To use Mazaryn Social, follow these steps:
 
 * Clone the repo
+* Run `npm install`
 * Run `npm start`
 
 ### Learn More
