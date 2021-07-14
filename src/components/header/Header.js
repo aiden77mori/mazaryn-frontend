@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div id="header">
       <div id="left">
-        <a href="/">Mazaryn social</a>
+        <p>Mazaryn social</p>
       </div>
       <div id="center">
         <p>Home</p>
