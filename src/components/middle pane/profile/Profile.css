@@ -37,11 +37,20 @@
     font-weight: bold;
 }
 
+.profile{
+    position: relative;
+    width: 100%;
+}
+
 /*footer menu*/
 
 .footerMenu{
-    width: 100%;
+    width: 46%;
     border:1px solid #e9d8fd;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 0.9375rem;
+    border-top-right-radius: 0.9375rem;
 }
 
 .footerMenu ul{
