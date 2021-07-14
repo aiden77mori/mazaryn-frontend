@@ -7,16 +7,18 @@ const Header = () => {
 
   return (
     <div id="header">
-      <div id="left">
-        <p>Mazaryn social</p>
-      </div>
-      <div id="center">
-        <p>Home</p>
-      </div>
-      <div id="profile">
-        <p className="userName">Teddy</p>
-        <img src={profileImage} alt="profileImage" />
-      </div>
+      <header>
+        <div id="left">
+          <p>Mazaryn social</p>
+        </div>
+        <div id="center">
+          <p>Home</p>
+        </div>
+        <div id="profile">
+          <p className="userName">Teddy</p>
+          <img src={profileImage} alt="profileImage" />
+        </div>
+      </header>
     </div>
   )
 }
