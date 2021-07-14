@@ -9,7 +9,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    /*
     padding: .8rem 4.1875rem;
+    */
     justify-content: center;
     font-size: 0.9375rem;
     background-color: #fff;}
