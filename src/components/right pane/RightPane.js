@@ -1,5 +1,6 @@
 import './RightPane.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
@@ -13,16 +14,24 @@ function RightPane({logout}){
             <nav>
                 <ul>
                     <li>
-                        <HomeIcon />
+                        <Link to='/'>
+                            <HomeIcon />
+                        </Link>                    
                     </li>
                     <li>
-                        <NotificationsIcon />
+                        <Link>
+                            <NotificationsIcon />
+                        </Link>
                     </li>
                     <li>
-                        <AccountBalanceWalletIcon />
+                        <Link>
+                            <AccountBalanceWalletIcon />
+                        </Link>
                     </li>
                     <li>
-                        <PersonIcon />
+                        <Link to='/profile'>
+                            <PersonIcon />
+                        </Link>
                     </li>
                     <li onClick={logout}>
                         <ExitToAppIcon/>
