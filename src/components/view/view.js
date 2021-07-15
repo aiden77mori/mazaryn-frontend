@@ -15,18 +15,16 @@ function View({logout}){
             <Header />
             <div className='section'>
                 <LeftPane />
-                <Router>
-                    <section id='middle'>
-                        <FeedProvider>
-                            <Switch>
-                                <Route exact path='/' component={Feed}/>
-                                <Route path='/profile' component={Profile} />
-                                <Route path='/group' component={Posts}/>
-                            </Switch>
-                        </FeedProvider>
-                    </section>
-                    <RightPane logout={logout}/>
-                </Router>
+                <section id='middle'>
+                    <FeedProvider>
+                        <Switch>
+                            <Route exact path='/' component={Feed}/>
+                            <Route path='/profile' component={Profile} />
+                            <Route path='/group' component={Posts}/>
+                        </Switch>
+                    </FeedProvider>
+                </section>
+                <RightPane logout={logout}/>
             </div>
         </div>
     )

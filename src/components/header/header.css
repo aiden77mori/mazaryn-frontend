@@ -39,10 +39,19 @@ header > div{
     width: 33.33%;
 }
 
-#profile{
+/* #profile{
     display: flex;
     flex-direction: row;
     align-items: center;
+} */
+
+.link{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 #center{

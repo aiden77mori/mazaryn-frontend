@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   
@@ -13,10 +14,12 @@ const Header = () => {
         </div>
         <div id="center">
           <p>Home</p>
-        </div>
+        </div>  
         <div id="profile">
-          <p className="userName">Teddy</p>
-          <img src={profileImage} alt="profileImage" />
+          <Link to='/profile' className='link'>
+            <p className="userName">Teddy</p>
+            <img src={profileImage} alt="profileImage" />
+          </Link>
         </div>
       </header>
     </div>
