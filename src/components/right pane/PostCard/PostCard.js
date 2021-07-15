@@ -1,11 +1,13 @@
-import React from 'react'
-import './PostCard.css'
+import React from 'react';
+import './PostCard.css';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 function PostCard() {
   return (
-    <div className="bg-white rounded">
-
-    </div>
+    <Popup trigger={<button></button>}>
+      <p>Pop up</p>
+    </Popup>
   )
 }
 
