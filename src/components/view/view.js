@@ -21,6 +21,8 @@ function View({logout}){
                             <Route exact path='/' component={Feed}/>
                             <Route path='/profile' component={Profile} />
                             <Route path='/group' component={Posts}/>
+                            <Route path='/notifications' component={FutureUpdate} />
+                            <Route path='/wallet' component={FutureUpdate} />
                         </Switch>
                     </FeedProvider>
                 </section>
@@ -30,4 +32,12 @@ function View({logout}){
     )
 }
 
+function FutureUpdate(){
+    return(
+        <h3>Yet to come</h3>
+    );
+}
+
+
 export default View
+

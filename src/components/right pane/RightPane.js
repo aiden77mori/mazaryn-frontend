@@ -25,12 +25,12 @@ function RightPane({logout}){
                         </Link>                    
                     </li>
                     <li>
-                        <Link>
+                        <Link to='/notifications'>
                             <NotificationsIcon />
                         </Link>
                     </li>
                     <li>
-                        <Link>
+                        <Link to='/wallet'>
                             <AccountBalanceWalletIcon />
                         </Link>
                     </li>
