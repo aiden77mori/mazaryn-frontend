@@ -11,7 +11,7 @@ function Feed(){
         <div>
             {
                 groups.map( group => 
-                    <div className='group'>
+                    <div className='group' key={group.id}>
                         <img src={group.profileImage} alt='groupImage'/>
                         <Link to='/group' className='link'>
                             <div>
