@@ -11,12 +11,7 @@ import PostCard from './PostCard/PostCard';
 function RightPane({logout}){
     return(
         <div className='rightPane'>
-            <PostCard className='postButton'/>
-            {   
-                /*
-                <button className='postButton'>Post</button>  
-                */  
-            }
+            <PostCard />
             <nav>
                 <ul>
                     <li>
