@@ -4,9 +4,12 @@ on:
   push: 
     branches: 
       - main
+  pull_request: 
+    branches:
+      - main
 
 jobs: 
-  log_node_version: 
+  run_tests: 
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
@@ -14,4 +17,4 @@ jobs:
         with: 
           node-version: '14.15.4'
       - run: npm install
-      - run: node -v
+      - run: npm test
