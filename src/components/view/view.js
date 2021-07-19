@@ -1,6 +1,6 @@
 import React from 'react';
 import './view.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from '../header/Header';
 import LeftPane from '../left pane/LeftPane';
 import RightPane from '../right pane/RightPane.js';
