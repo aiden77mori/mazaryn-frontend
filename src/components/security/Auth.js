@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { UserContext } from '../context/UserContext';
 import View from '../view/View';
 import SignIn from './signin/SignIn';
-
+import { UserContext } from '../context/UserContext';
 
 function Auth(){
 
