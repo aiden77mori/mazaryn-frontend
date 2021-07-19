@@ -11,3 +11,9 @@
     font-size: large;
     border-style: none;
 }
+
+#popup-2{
+    width: 37.5rem;
+    height: 17.875rem;
+    border-radius: 0.9375rem;
+}
