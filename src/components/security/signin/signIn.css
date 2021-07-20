@@ -33,7 +33,7 @@
     flex-direction: column;
 }
 
-input {
+.signInForm input {
     width: 471px;
     height: 47px;
     background: #E9D8FD;

@@ -27,10 +27,12 @@ function PostCard() {
         Post
       </button>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
-        <a className="close" onClick={closeModal}>&times;</a>
         <form className='popupForm' onSubmit={handleSubmit}>
           <textarea onChange={handleChange} value={post}/>
-          <input type='submit' value='submit'/>
+          <div className='popupFormBtns'>
+            <a className="close" onClick={closeModal}>&times;</a>
+            <input type='submit' value='submit'/>            
+          </div>
         </form>
       </Popup>
     </div>

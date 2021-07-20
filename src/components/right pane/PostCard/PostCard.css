@@ -30,3 +30,9 @@
     border-style: none;
     color: rgba(0, 0, 0, 70%);
 }
+
+.popupFormBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
