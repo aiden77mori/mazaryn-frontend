@@ -13,7 +13,8 @@ function PostCard() {
 
   function handleSubmit(e){
     e.preventDefault();
-    //post data to the backend
+    //post data to the backend and close the popup
+    closeModal();
   }
 
   function closeModal(){
@@ -29,6 +30,7 @@ function PostCard() {
         <a className="close" onClick={closeModal}>&times;</a>
         <form className='popupForm' onSubmit={handleSubmit}>
           <textarea onChange={handleChange} value={post}/>
+          <input type='submit' value='submit'/>
         </form>
       </Popup>
     </div>
