@@ -31,7 +31,7 @@ function SignUp(){
     return(
         <div className='sign-up-container'>
             <h2>Sign up to Mazaryn</h2>
-            <form onSubmit={handleSubmit}>
+            <form className='signUpForm' onSubmit={handleSubmit}>
                 <div className='input'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" value={email} onChange={handleChange}/>

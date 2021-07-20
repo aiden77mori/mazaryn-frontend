@@ -28,7 +28,7 @@ function SignIn({login, error}){
     return(
         <div className='sign-in-container'>
             <h2>Sign in to Mazaryn</h2>
-            <form onSubmit={handleSubmit}>
+            <form className='signInForm' onSubmit={handleSubmit}>
                 {
                 (error !== '') ? (<p>{error}</p>): ("")
                 }

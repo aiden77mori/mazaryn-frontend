@@ -5,7 +5,17 @@ import 'reactjs-popup/dist/index.css';
 
 function PostCard() {
   const [open, setOpen] = useState(false);
+  const [post, setPost] = useState(null);
   
+  function handleChange(e){
+    setPost(e.target.value);
+  }
+
+  function handleSubmit(e){
+    e.preventDefault();
+    //post data to the backend
+  }
+
   function closeModal(){
     setOpen(false);
   }
@@ -17,8 +27,8 @@ function PostCard() {
       </button>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <a className="close" onClick={closeModal}>&times;</a>
-        <form>
-          <textarea />
+        <form className='popupForm' onSubmit={handleSubmit}>
+          <textarea onChange={handleChange}/>
         </form>
       </Popup>
     </div>

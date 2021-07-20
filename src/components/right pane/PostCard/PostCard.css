@@ -17,3 +17,15 @@
     height: 17.875rem;
     border-radius: 0.9375rem;
 }
+
+.popupForm{
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.popupForm textarea{
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
