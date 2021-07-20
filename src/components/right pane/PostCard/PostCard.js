@@ -14,6 +14,11 @@ function PostCard() {
   function handleSubmit(e){
     e.preventDefault();
     //post data to the backend and close the popup
+    //check if the user has typed in something, if not, do not post to the db
+    if(post === 'Type something...'){
+      console.log('Type before submitting');
+      return
+    }
     closeModal();
   }
 
