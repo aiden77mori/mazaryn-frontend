@@ -5,7 +5,7 @@ import 'reactjs-popup/dist/index.css';
 
 function PostCard() {
   const [open, setOpen] = useState(false);
-  const [post, setPost] = useState(null);
+  const [post, setPost] = useState('Type something...');
   
   function handleChange(e){
     setPost(e.target.value);
@@ -28,7 +28,7 @@ function PostCard() {
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <a className="close" onClick={closeModal}>&times;</a>
         <form className='popupForm' onSubmit={handleSubmit}>
-          <textarea onChange={handleChange}/>
+          <textarea onChange={handleChange} value={post}/>
         </form>
       </Popup>
     </div>
