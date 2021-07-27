@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './PostCard.css';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import ClearIcon from '@material-ui/icons/Clear';
+import ImageIcon from '@material-ui/icons/Image';
+import CheckIcon from '@material-ui/icons/Check';
 
 function PostCard() {
   const [open, setOpen] = useState(false);
@@ -32,11 +35,13 @@ function PostCard() {
         Post
       </button>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+        <p className="cardTitle">Post</p>
         <form className='popupForm' onSubmit={handleSubmit}>
           <textarea onChange={handleChange} value={post}/>
           <div className='popupFormBtns'>
-            <a className="close" onClick={closeModal}>&times;</a>
-            <input type='submit' value='submit'/>            
+            <ClearIcon onClick={closeModal}/>
+            <ImageIcon />
+            <CheckIcon />            
           </div>
         </form>
       </Popup>

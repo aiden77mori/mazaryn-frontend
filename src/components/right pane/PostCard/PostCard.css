@@ -26,8 +26,9 @@
 
 .popupForm textarea{
     width: 100%;
-    height: 100%;
-    border-style: none;
+    height: 90%;
+    border: none;
+    outline: none;
     color: rgba(0, 0, 0, 70%);
 }
 
@@ -35,4 +36,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.cardTitle{
+    font-size: 0.9375rem;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1.1875rem;
 }
