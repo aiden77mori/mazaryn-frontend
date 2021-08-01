@@ -1,4 +1,4 @@
-import React , { useContext } from 'react'
+import React , { useContext, useEffect } from 'react'
 import './Feed.css'
 import { FeedContext } from '../../context/FeedContext';
 import { Link } from 'react-router-dom';
@@ -8,11 +8,14 @@ function Feed(){
 
     const [groups, setGroups] = useContext(FeedContext);
 
-    axios.get('http://localhost:8000/groups/groups/')
-    .then( res => {
-      console.log(res.data)
-      setGroups(res.data)
-    });
+    useEffect(() => {
+        axios.get('http://localhost:8000/groups/groups/')
+        .then( res => {
+          console.log(res.data)
+          setGroups(res.data)
+        });
+    }, []);
+    
   
 
     return(
