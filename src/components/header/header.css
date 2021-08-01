@@ -29,7 +29,7 @@ header > div{
 }
 
 #header{
-    box-shadow: 0 4px 12px rgba(232, 217, 253, .5);
+    box-shadow: 0 4px 12px rgba(10, 185, 122, .1);
     position: fixed;
     top: 0;
     z-index: 3;
