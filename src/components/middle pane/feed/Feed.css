@@ -22,4 +22,9 @@
 
 .groupName{
     font-weight: bold;
+    width: 100%;
+}
+
+.incomingText{
+    width: 100%;
 }

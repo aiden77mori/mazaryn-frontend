@@ -9,10 +9,10 @@ function Feed(){
     const [groups, setGroups] = useContext(FeedContext);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/groups/groups/')
+        axios.get('http://localhost:8000/groups/')
         .then( res => {
-          console.log(res.data)
           setGroups(res.data)
+          //console.log(groups[groups.length-1].members)
         });
     }, []);
     
@@ -23,12 +23,10 @@ function Feed(){
             {
                 groups.map( group => 
                     <div className='group' key={group.id}>
-                        <img src={group.profileImage} alt='groupImage'/>
+                        <img src={group.profileImage} alt='img'/>
                         <Link to='/group' className='link'>
-                            <div>
-                                <div className='groupName'>{group.name}</div>
-                                <div className='incomingText'>{group.newText}</div>      
-                            </div>
+                            <div className='groupName'>{group.group_name}</div>
+                            <div className='incomingText'>{'hey'}</div>      
                         </Link>
                     </div>
                 )
