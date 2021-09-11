@@ -1,0 +1,37 @@
+.login-card {
+  width: 662px;
+  height: 482px;
+  box-shadow: 4px 4px 12px rgba(10, 185, 122, 0.2);
+}
+
+.ant-form-item-label > label {
+  font-weight: 600;
+}
+
+.ant-input {
+  border: 1px solid #20D493;
+  border-radius: 5rem;
+  height: 2rem;
+}
+
+.ant-input:focus, .ant-input-focused {
+  border-color: #20D493;
+  border-right-width: 1px !important;
+  outline: 0;
+  box-shadow: none;
+}
+
+.ant-form-item-with-help {
+  margin-bottom: 1rem;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  border-color: #0AB97A;
+  background: #0AB97A;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+  border-radius: 5rem;
+  width: 13rem;
+  height: 2rem;
+}

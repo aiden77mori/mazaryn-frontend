@@ -1,13 +1,13 @@
 import React from 'react';
 import './view.css';
 import { Switch, Route } from 'react-router-dom';
-import Header from '../header/Header';
-import LeftPane from '../left pane/LeftPane';
-import RightPane from '../right pane/RightPane.js';
-import Posts from '../middle pane/post/Posts';
-import Profile from '../middle pane/profile/Profile';
-import Feed from '../middle pane/feed/Feed';
-import { FeedProvider } from '../context/FeedContext';
+import Header from '../components/header/Header';
+import LeftPane from '../components/left pane/LeftPane';
+import RightPane from '../components/right pane/RightPane.js';
+import Posts from '../components/middle pane/post/Posts';
+import Profile from '../components/middle pane/profile/Profile';
+import Feed from '../components/middle pane/feed/Feed';
+import { FeedProvider } from '../components/context/FeedContext';
 
 function View({logout}){
     return(
