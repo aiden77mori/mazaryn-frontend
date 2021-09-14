@@ -17,6 +17,7 @@ module.exports = {
       current: 'currentColor',
       lightgreen: '#DDEDDF',
       greenborder: '#20D493',
+      greenBackground: 'rgba(10, 185, 122, 0.1)',
 
       black: colors.black,
       white: colors.white,

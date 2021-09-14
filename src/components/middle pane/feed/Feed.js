@@ -1,18 +1,17 @@
-import React , { useContext, useEffect } from 'react'
+import React , { useContext } from 'react'
 //import './Feed.css'
 import { FeedContext } from '../../context/FeedContext';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 function Feed(){
 
     const [groups] = useContext(FeedContext);
 
     return(
-        <div>
+        <div className="bg-greenBackground w-cardWidth">
             {
                 groups.map( group => 
-                    <div className='w-cardWidth h-cardHeight flex flex-row px-14 py-5 shadow-light mb-2.5' key={group.id}>
+                    <div className='w-cardWidth h-cardHeight bg-white flex flex-row px-14 py-5 mb-2.5' key={group.id}>
                         <img src={group.profileImage} alt='img' className="h-16 w-16 rounded-full my-auto"/>
                         <Link to='/group' className='flex flex-col text-black my-auto flex-grow text-left pl-6'>
                             <div className='font-bold'>Zaryn</div>
