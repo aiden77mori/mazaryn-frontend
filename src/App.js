@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Loader } from './components/Loaders/Loader'
 // import ProtectedRoutes from './guards/ProtectedRoutes';
 import './App.css';
+import View from './views/view';
 
 const LoginScreen = React.lazy(() => import('./views/Login/Login'))
 
@@ -14,8 +15,11 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/">
-              <LoginScreen />
-            </Route>
+              <View />
+              {
+              //<LoginScreen />
+              }
+              </Route>
           </Switch>
         </Router>
       </Suspense>

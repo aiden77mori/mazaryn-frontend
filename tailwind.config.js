@@ -167,6 +167,7 @@ module.exports = {
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
+      light: '3px 15px 12px 0 rgba(10, 185, 122, 0.1)'
     },
     caretColor: (theme) => theme('colors'),
     contrast: {
@@ -431,6 +432,7 @@ module.exports = {
       '5/6': '83.333333%',
       full: '100%',
       screen: '100vh',
+      cardHeight: '7.75rem'
     }),
     inset: (theme, { negative }) => ({
       auto: 'auto',
@@ -795,7 +797,8 @@ module.exports = {
       screen: '100vw',
       min: 'min-content',
       max: 'max-content',
-      dashboard: '17.125rem'
+      dashboard: '17.125rem',
+      cardWidth: '38.375rem' 
     }),
     zIndex: {
       auto: 'auto',
