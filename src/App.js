@@ -14,7 +14,7 @@ function App() {
       <Suspense fallback={<Loader fullscreen />}>
         <Router>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/group">
               <View />
               {
               //<LoginScreen />

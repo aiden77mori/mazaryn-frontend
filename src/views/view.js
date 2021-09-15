@@ -15,7 +15,7 @@ function View({logout}){
             <Header />
             <div className='section'>
                 <LeftPane />
-                <section id='middle'>
+                <section id='middle' className='bg-faintgreen min-w-min'>
                     <FeedProvider>
                         <Switch>
                             <Route exact path='/' component={Feed}/>

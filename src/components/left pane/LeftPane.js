@@ -4,7 +4,7 @@ import Search from './search/Search.js';
 
 function LeftPane(){
     return(
-        <div className='leftPane'>
+        <div className='leftPane pt-19'>
             <Search />
         </div>
     );

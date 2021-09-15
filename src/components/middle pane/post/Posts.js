@@ -1,8 +1,8 @@
 import React from 'react';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import SubjectIcon from '@material-ui/icons/Subject';
-import EditIcon from '@material-ui/icons/Edit';
-import './Post.css'
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+//import './Post.css'
 
 function Posts(){
 
@@ -30,7 +30,11 @@ function Posts(){
     ];
 
     return(
-        <div className='posts'>
+        <div className=''>
+            <div className='fixed z-2 w-141 bg-faintgreen pt-19'>
+                <h3 className='font-bold'>Group name</h3>
+            </div>
+            <div className='pt-24'>
             {
                 posts.map( post => {
                     return(
@@ -38,30 +42,33 @@ function Posts(){
                     )
                 })
             }
+            </div>
         </div>
     );
 }
 
 function Post(props){
     return(
-        <div className='post'>
+        <div className='w-141 mx-auto mb-10 p-3 bg-white border-1 border-boxborder rounded-2xl'>
             {/* Dynamically set the profile image*/}
-            <section className='top'>
-                <figure>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage'/>
-                    <figcaption>
+            <section className=''>
+                <figure className='flex flex-row m-0'>
+                    <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage' className='w-10 h-10 rounded-full'/>
+                    <figcaption className='my-auto m-6 font-bold'>
                         {props.userName}
                     </figcaption>    
                 </figure>
-                <EditIcon />
             </section>
-            <section className='content'>
+            <section className='text-left w-110 mx-auto'>
                 <p>{props.text}</p>
             </section>
-            <section className='bottom'>
-                <div className='icons'>
-                    <FavoriteBorderIcon />
+            <section className='w-110 mx-auto mt-7.5 flex flex-row justify-between'>
+                <div className='text-left'>
+                    <FavoriteBorderIcon className='mr-5.5'/>
                     <SubjectIcon />
+                </div>
+                <div>
+                    <MoreVertIcon />
                 </div>
             </section>
         </div>

@@ -1,8 +1,11 @@
 
 .App{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
+p{
+    font-size: 15px;
+}
 /* .body{
     display: flex;
     flex-direction: row;

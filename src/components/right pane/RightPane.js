@@ -10,7 +10,7 @@ import PostCard from './PostCard/PostCard';
 
 function RightPane({logout}){
     return(
-        <div className='rightPane'>
+        <div className='rightPane pt-19'>
             <PostCard />
             <nav>
                 <ul>
