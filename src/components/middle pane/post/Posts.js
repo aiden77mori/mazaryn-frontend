@@ -2,6 +2,7 @@ import React from 'react';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import SubjectIcon from '@material-ui/icons/Subject';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 //import './Post.css'
 
 function Posts(){
@@ -30,11 +31,12 @@ function Posts(){
     ];
 
     return(
-        <div className=''>
-            <div className='fixed z-2 w-141 bg-faintgreen pt-19'>
-                <h3 className='font-bold'>Group name</h3>
+        <div className='relative'>
+            <div className='w-141 mx-auto bg-gradient-to-b from-faintgreen via-faintgreen pt-19 flex flex-row sticky top-0'>
+                <ArrowBackIcon />
+                <h3 className='font-bold flex-grow'>Group name</h3>
             </div>
-            <div className='pt-24'>
+            <div className='pt-10'>
             {
                 posts.map( post => {
                     return(
