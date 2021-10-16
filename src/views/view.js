@@ -7,24 +7,22 @@ import RightPane from '../components/right pane/RightPane.js';
 import Posts from '../components/middle pane/post/Posts';
 import Profile from '../components/middle pane/profile/Profile';
 import Feed from '../components/middle pane/feed/Feed';
-import { FeedProvider } from '../components/context/FeedContext';
 
 function View({logout}){
+
     return(
         <div id='view'>
             <Header />
             <div className='section'>
                 <LeftPane />
                 <section id='middle' className='bg-faintgreen min-w-min'>
-                    <FeedProvider>
                         <Switch>
                             <Route exact path='/' component={Feed}/>
-                            <Route path='/profile' component={Profile} />
-                            <Route path='/group' component={Posts}/>
-                            <Route path='/notifications' component={FutureUpdate} />
-                            <Route path='/wallet' component={FutureUpdate} />
+                            <Route exact path='/profile' component={Profile} />
+                            <Route exact path='/group' component={Posts}/>
+                            <Route exact path='/notifications' component={FutureUpdate} />
+                            <Route exact path='/wallet' component={FutureUpdate} />
                         </Switch>
-                    </FeedProvider>
                 </section>
                 <RightPane logout={logout}/>
             </div>

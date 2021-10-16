@@ -2,17 +2,16 @@ import React , { useContext } from 'react'
 //import './Feed.css'
 import { FeedContext } from '../../context/FeedContext';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function Feed(){
-
-    const [groups] = useContext(FeedContext);
+function Feed(props){
 
     return(
         <div className="bg-greenBackground w-cardWidth">
             {
-                groups.map( group => 
-                    <div className='w-cardWidth h-cardHeight bg-white flex flex-row px-14 py-5 mb-2.5' key={group.id}>
-                        <img src={group.profileImage} alt='img' className="h-16 w-16 rounded-full my-auto"/>
+                props.posts?.data.map( (post, i) => 
+                    <div className='w-cardWidth h-cardHeight bg-white flex flex-row px-14 py-5 mb-2.5' style={{marginTop : i == 0 ? '4rem' : ''}} key={post.id}>
+                        <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage' className='w-10 h-10 rounded-full'/>
                         <Link to='/group' className='flex flex-col text-black my-auto flex-grow text-left pl-6'>
                             <div className='font-bold'>Zaryn</div>
                             <div className='incomingText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis turpis vitae tellus mollis, at vestibulum massa...</div>      
@@ -24,4 +23,8 @@ function Feed(){
     );
 }
 
-export default Feed;
+const mapStateToProps = (state) => ({
+    posts : state.posts
+})
+
+export default connect(mapStateToProps, null)(Feed);

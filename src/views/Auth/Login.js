@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Form, Input, Button } from 'antd';
 import './Login.css'
+import { login } from '../../redux/actions';
+import { connect } from 'react-redux';
 
-const Login = () => {
+const Login = memo((props) => {
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
-    console.log(values);
+  const onFinish = async (values) => {
+    const response = await props.login(values)
+    if(response?.status === 'successStatus'){
+      props.history.push('/group')
+    }
   };
 
   return (
@@ -28,6 +33,10 @@ const Login = () => {
                 label="Email Address"
                 name="email"
                 rules={[
+                  {
+                    type: 'email',
+                    message: 'Please type a valid email',
+                  },
                   {
                     required: true,
                     message: 'Please input your email',
@@ -55,7 +64,7 @@ const Login = () => {
                 </Button>
               </div>
               <div className="cursor-pointer">
-                <p className="text-green-600 text-center underline pt-5">Don't have an account? Sign up here</p>
+                <p className="text-green-600 text-center underline pt-5" onClick={() => props.history.push('/signup')}>Don't have an account? Sign up here</p>
               </div>
             </Form>
           </div>
@@ -63,6 +72,6 @@ const Login = () => {
       </div>
     </div>
   )
-}
+})
 
-export default Login
+export default connect(null, {login})(Login)
