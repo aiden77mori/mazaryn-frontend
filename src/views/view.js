@@ -17,7 +17,7 @@ function View({logout}){
                 <LeftPane />
                 <section id='middle' className='bg-faintgreen min-w-min'>
                         <Switch>
-                            <PrivateRoute exact path='/feed' component={Feed}/>
+                            <PrivateRoute exact path='/' component={Feed}/>
                             <PrivateRoute exact path='/profile' component={Profile} />
                             <PrivateRoute exact path='/group' component={Posts}/>
                             <PrivateRoute exact path='/notifications' component={FutureUpdate} />
