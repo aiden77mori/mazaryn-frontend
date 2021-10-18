@@ -12,7 +12,7 @@ const UnprotectedRoute = (props) => {
 };
 
 const mapStateToProps = () => ({
-  token: localStorage.getItem('marzaryn_token')
+  token: localStorage.getItem('auth_token')
 });
 
 export default connect(mapStateToProps)(UnprotectedRoute);

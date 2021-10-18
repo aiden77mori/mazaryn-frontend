@@ -5,14 +5,14 @@ import { Route, Redirect } from "react-router-dom";
 const PrivateRoute = (props) => {
   const { token } = props;
   if (!token) {
-    return <Redirect to="/" />;
+    return <Redirect to="/login" />;
   }
 
   return <Route {...props} />;
 };
 
 const mapStateToProps = () => ({
-  token: localStorage.getItem('marzaryn_token')
+  token: localStorage.getItem('auth_token')
 });
 
 export default connect(mapStateToProps)(PrivateRoute);
