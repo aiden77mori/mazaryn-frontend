@@ -37,7 +37,7 @@ export const login = (data) => (dispatch) => {
 
 export const signUp = (data) => (dispatch) => {
     const callApi = async() => {
-        const url = `${process.env.REACT_APP_BASE_URL}authusers/`
+        const url = `${process.env.REACT_APP_BASE_URL}auth/users/`
         try{
             const res = await fetch(url, {
                 method: 'POST',
