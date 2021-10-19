@@ -5,8 +5,8 @@ import store from '../src/redux/store';
 
 test('renders App component', () => {
   render(
-    <Provider store={store}>
+  <Provider store={store}>
       <App />
-    </Provider>
+  </Provider>
   );
 });

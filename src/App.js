@@ -1,25 +1,26 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Loader } from './components/Loaders/Loader'
+import ShowToasts from './components/showTosts';
 // import ProtectedRoutes from './guards/ProtectedRoutes';
 //import './App.css';
 import View from './views/view';
 
-const LoginScreen = React.lazy(() => import('./views/Login/Login'))
+const LoginScreen = React.lazy(() => import('./views/Auth/Login'))
+const SignUpScreen = React.lazy(() => import('./views/Auth/SignUp'))
 
-function App() {
+const App = (props) => {
 
   return (
     <div className="App font-nunito">
+      <ShowToasts />
       <Suspense fallback={<Loader fullscreen />}>
         <Router>
           <Switch>
-            <Route exact path="/group">
+              <Route exact path='/login' component={LoginScreen}/>
+              <Route exact path='/signup' component={SignUpScreen}/>
               <View />
-              {
-              //<LoginScreen />
-              }
-              </Route>
           </Switch>
         </Router>
       </Suspense>
@@ -27,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, null)(App);
