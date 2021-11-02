@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   globalInfo: null,
 };
 
-export default function errorReducer(state = INITIAL_STATE, action) {
+export default function commonReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case GLOBAL_ERROR:
       return { ...state, globalError: action.payload };

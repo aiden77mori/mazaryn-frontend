@@ -1,4 +1,4 @@
-import React, {Suspense, useEffect} from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Loader } from './components/Loaders/Loader'
@@ -18,9 +18,10 @@ const App = (props) => {
       <Suspense fallback={<Loader fullscreen />}>
         <Router>
           <Switch>
-              <Route exact path='/login' component={LoginScreen}/>
-              <Route exact path='/signup' component={SignUpScreen}/>
-              <View />
+            <Route exact path='/login' component={LoginScreen} />
+            <Route exact path='/signup' component={SignUpScreen} />
+            <Route component={View} />
+            {/* <View /> */}
           </Switch>
         </Router>
       </Suspense>

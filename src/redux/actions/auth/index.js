@@ -2,9 +2,9 @@ import { GLOBAL_ERROR, GLOBAL_SUCCESS } from "../../types";
 
 
 export const login = (data) => (dispatch) => {
-    const callApi = async() => {
+    const callApi = async () => {
         const url = `${process.env.REACT_APP_BASE_URL}auth-token/token/login/`
-        try{
+        try {
             const res = await fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -14,21 +14,21 @@ export const login = (data) => (dispatch) => {
             if (res.status === 500) {
                 throw res;
             }
-            if(res.status === 400){
+            if (res.status === 400) {
                 const error = res_data
-                if(error){
-                    dispatch({type : GLOBAL_ERROR, payload : error})
-                   return { status: "errorStatus", message: error };
+                if (error) {
+                    dispatch({ type: GLOBAL_ERROR, payload: error })
+                    return { status: "errorStatus", message: error };
                 }
             }
             if (res.status !== 200) {
-              throw res_data;
+                throw res_data;
             } else {
-                localStorage.setItem('auth_token', res_data?.auth_token)                
-                dispatch({type : GLOBAL_SUCCESS, payload : 'Successfully login'})
+                localStorage.setItem('auth_token', res_data?.auth_token)
+                dispatch({ type: GLOBAL_SUCCESS, payload: 'Successfully login' })
                 return { status: "successStatus", message: res_data };
             }
-        }catch(err){
+        } catch (err) {
             console.log(err)
         }
     }
@@ -36,9 +36,9 @@ export const login = (data) => (dispatch) => {
 }
 
 export const signUp = (data) => (dispatch) => {
-    const callApi = async() => {
+    const callApi = async () => {
         const url = `${process.env.REACT_APP_BASE_URL}auth/users/`
-        try{
+        try {
             const res = await fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -48,20 +48,20 @@ export const signUp = (data) => (dispatch) => {
             if (res.status === 500) {
                 throw res;
             }
-            if(res.status === 400){
+            if (res.status === 400) {
                 const error = res_data
-                if(error){
-                    dispatch({type : GLOBAL_ERROR, payload : error})
-                   return { status: "errorStatus", message: error };
+                if (error) {
+                    dispatch({ type: GLOBAL_ERROR, payload: error })
+                    return { status: "errorStatus", message: error };
                 }
             }
             if (res.status !== 201) {
-              throw res_data;
+                throw res_data;
             } else {
-                dispatch({type : GLOBAL_SUCCESS, payload : 'Signup successfully'})
+                dispatch({ type: GLOBAL_SUCCESS, payload: 'Signup successfully' })
                 return { status: "successStatus", message: res_data };
             }
-        }catch(err){
+        } catch (err) {
             console.log(err)
         }
     }

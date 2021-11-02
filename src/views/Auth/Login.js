@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Form, Input, Button } from 'antd';
-import './Login.css'
+// import './Login.css'
 import { login } from '../../redux/actions';
 import { connect } from 'react-redux';
 

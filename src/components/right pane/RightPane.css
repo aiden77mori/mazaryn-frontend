@@ -7,7 +7,7 @@ nav{
     padding-top: 1.625rem;
 }
 
-ul > li{
+.rightPaneUl > li{
     height: 2.75rem;
     width: 2.75rem;
     border-radius: 50%;

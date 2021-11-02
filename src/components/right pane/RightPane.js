@@ -8,16 +8,22 @@ import PersonIcon from '@material-ui/icons/Person';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PostCard from './PostCard/PostCard';
 
-function RightPane({logout}){
-    return(
+const RightPane = (props) => {
+    console.log(props)
+    const logout = () => {
+        localStorage.removeItem("auth_token")
+        props.history.push("/login")
+    }
+
+    return (
         <div className='rightPane pt-19'>
             <PostCard />
             <nav>
-                <ul>
+                <ul className="rightPaneUl">
                     <li>
                         <Link to='/'>
                             <HomeIcon />
-                        </Link>                    
+                        </Link>
                     </li>
                     <li>
                         <Link to='/notifications'>
@@ -34,8 +40,8 @@ function RightPane({logout}){
                             <PersonIcon />
                         </Link>
                     </li>
-                    <li onClick={logout}>
-                        <ExitToAppIcon/>
+                    <li onClick={logout} className="cursor-pointer">
+                        <ExitToAppIcon />
                     </li>
                 </ul>
             </nav>
