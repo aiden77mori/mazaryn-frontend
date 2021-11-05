@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Form, Input, Button } from 'antd';
-// import './Login.css'
+import './Login.css'
 import { login } from '../../redux/actions';
 import { connect } from 'react-redux';
 
@@ -18,10 +18,10 @@ const Login = memo((props) => {
     <div className="flex bg-white h-screen">
       <div className="w-full flex flex-row bg-lightgreen">
         <div className="w-2/5 flex flex-col items-center justify-center">
-          <p>Chat <br/> Hangour <br/> & more</p>
+          <p className="chat-logo text-4xl">Chat <br/> Hangour <br/> & more</p>
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
-          <h4 className="font-bold text-center text-xl">Sign in</h4>
+          <h4 className="font-bold text-center text-xl page-name">Sign in</h4>
           <div className="w-1/2">
             <Form
               form={form}
@@ -41,7 +41,6 @@ const Login = memo((props) => {
                     message: 'Please type a valid email',
                   },
                   {
-                    required: true,
                     message: 'Please input your email',
                   },
                 ]}
@@ -53,19 +52,18 @@ const Login = memo((props) => {
                 name="password"
                 rules={[
                   {
-                    required: true,
                     message: 'Please input your password',
                   },
                 ]}
               >
                 <Input placeholder="Password" type="password" />
               </Form.Item>
-              <p className="flex justify-end -mt-3">Forgot Password?</p>
               <button className="w-full h-9 text-white bg-greenborder rounded-lg" type="submit">
                 Login
               </button>
-              <div className="cursor-pointer">
+              <div className="cursor-pointer flex flex-row justify-between">
                 <p className="text-green-600 text-center no-underline pt-5" onClick={() => props.history.push('/signup')}>Sign up</p>
+                <p className="text-center pt-5 text-red-400">forgot Password?</p>
               </div>
             </Form>
           </div>
