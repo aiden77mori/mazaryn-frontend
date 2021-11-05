@@ -18,7 +18,7 @@ const Login = memo((props) => {
     <div className="flex bg-white h-screen">
       <div className="w-full flex flex-row bg-lightgreen">
         <div className="w-2/5 flex flex-col items-center justify-center">
-          <p className="chat-logo text-4xl">Chat <br/> Hangour <br/> & more</p>
+          <p className="chat-logo text-4xl">Chat <br/> <p className="m-0 text-greenborder font-extrabold text-5xl">Hangout</p>& more</p>
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
           <h4 className="font-bold text-center text-xl page-name">Sign in</h4>
