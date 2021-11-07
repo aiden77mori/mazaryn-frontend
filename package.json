@@ -27,6 +27,7 @@
     "build": "env-cmd -f .env.prod craco build",
     "build:dev": "env-cmd -f .env.dev craco build",
     "build:test": "env-cmd -f .env.test craco build",
+    "deploy": "aws s3 sync build/ s3://app.mazaryn.xyz",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
