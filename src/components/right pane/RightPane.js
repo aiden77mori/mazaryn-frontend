@@ -9,44 +9,44 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PostCard from './PostCard/PostCard';
 
 const RightPane = (props) => {
-    console.log(props)
-    const logout = () => {
-        localStorage.removeItem("auth_token")
-        props.history.push("/login")
-    }
+  console.log(props)
+  const logout = () => {
+    localStorage.removeItem("auth_token")
+    props.history.push("/login")
+  }
 
-    return (
-        <div className='rightPane pt-19'>
-            <PostCard />
-            <nav>
-                <ul className="rightPaneUl">
-                    <li>
-                        <Link to='/'>
-                            <HomeIcon />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='/notifications'>
-                            <NotificationsIcon />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='/wallet'>
-                            <AccountBalanceWalletIcon />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='/profile'>
-                            <PersonIcon />
-                        </Link>
-                    </li>
-                    <li onClick={logout} className="cursor-pointer">
-                        <ExitToAppIcon />
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    );
+  return (
+    <div className='rightPane pt-19'>
+      <PostCard />
+      <nav>
+        <ul className="rightPaneUl">
+          <li>
+            <Link to='/'>
+              <HomeIcon />
+            </Link>
+          </li>
+          <li>
+            <Link to='/notifications'>
+              <NotificationsIcon />
+            </Link>
+          </li>
+          <li>
+            <Link to='/wallet'>
+              <AccountBalanceWalletIcon />
+            </Link>
+          </li>
+          <li>
+            <Link to='/profile'>
+              <PersonIcon />
+            </Link>
+          </li>
+          <li onClick={logout} className="cursor-pointer">
+            <ExitToAppIcon />
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
 
 export default RightPane;

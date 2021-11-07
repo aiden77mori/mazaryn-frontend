@@ -1,6 +1,5 @@
 import React from 'react';
 import './view.css';
-import { Switch } from 'react-router-dom';
 import Header from '../components/header/Header';
 import LeftPane from '../components/left pane/LeftPane';
 import RightPane from '../components/right pane/RightPane.js';

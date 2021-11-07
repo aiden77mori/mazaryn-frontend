@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input } from 'antd';
 import './Login.css'
 import { login } from '../../redux/actions';
 import { connect } from 'react-redux';
@@ -9,7 +9,7 @@ const Login = memo((props) => {
 
   const onFinish = async (values) => {
     const response = await props.login(values)
-    if(response?.status === 'successStatus'){
+    if (response?.status === 'successStatus') {
       props.history.push('/group')
     }
   };
@@ -18,7 +18,15 @@ const Login = memo((props) => {
     <div className="flex bg-white h-screen">
       <div className="w-full flex flex-row bg-lightgreen">
         <div className="w-2/5 flex flex-col items-center justify-center">
-          <p className="chat-logo text-4xl">Chat <br/> <p className="m-0 text-greenborder font-extrabold text-5xl">Hangout</p>& more</p>
+          <p className="chat-logo text-4xl">
+            Chat
+            <br />
+            <p className="m-0 text-greenborder font-extrabold text-5xl">
+              Hangout
+            </p>
+            &#38; more
+          </p>
+          <img src={process.env.PUBLIC_URL + '/assets/images/woman_illustrations.svg'} alt='' className='absolute right-45' />
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
           <h4 className="font-bold text-center text-xl page-name">Sign in</h4>
@@ -73,4 +81,4 @@ const Login = memo((props) => {
   )
 })
 
-export default connect(null, {login})(Login)
+export default connect(null, { login })(Login)
