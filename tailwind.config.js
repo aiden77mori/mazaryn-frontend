@@ -101,7 +101,7 @@ module.exports = {
       'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
       'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
-      'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
+      'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))'
     },
     backgroundOpacity: (theme) => theme('opacity'),
     backgroundPosition: {
@@ -462,6 +462,7 @@ module.exports = {
       '-2/4': '-50%',
       '-3/4': '-75%',
       '-full': '-100%',
+      '45': '45%'
     }),
     keyframes: {
       spin: {

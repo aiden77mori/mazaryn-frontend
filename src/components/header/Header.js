@@ -36,16 +36,16 @@ const Header = () => {
         <div id="profile">
           <MessageOutlined className="mr-3" />
           <Link to='/notifications' className="mr-4">
-            <img src={`${process.env.PUBLIC_URL}/assets/images/notifications_black_24dp.svg`} />
+            <img src={`${process.env.PUBLIC_URL}/assets/images/notifications_black_24dp.svg`} alt='notification button'/>
           </Link>
           <Link to='/profile' className='link'>
             {/* <p className="userName">Teddy</p> */}
             <img src={profileImage} alt="profileImage" />
           </Link>
           <Dropdown className="ml-2 text-black" placement="bottomCenter" overlay={menu} trigger={['click']} arrow>
-            <a onClick={e => e.preventDefault()}>
+            <div onClick={e => e.preventDefault()}>
               <DownOutlined />
-            </a>
+            </div>
           </Dropdown>
         </div>
       </header>
