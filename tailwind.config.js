@@ -20,6 +20,7 @@ module.exports = {
       greenBackground: 'rgba(10, 185, 122, 0.1)',
       faintgreen: '#F9FFFD',
       boxborder: '#A3FBDB',
+      btnhover: '#037D51',
 
       black: colors.black,
       white: colors.white,

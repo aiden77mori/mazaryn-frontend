@@ -26,11 +26,11 @@ const Login = memo((props) => {
             </p>
             &#38; more
           </p>
-          <img src={process.env.PUBLIC_URL + '/assets/images/woman_illustrations.svg'} alt='' className='absolute right-45' />
+          <img src={process.env.PUBLIC_URL + '/assets/images/woman_illustrations.svg'} alt='' className='absolute right-45 transform scale-75' />
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
           <h4 className="font-bold text-center text-xl page-name">Sign in</h4>
-          <div className="w-1/2">
+          <div className="w-1/2 max-w-md">
             <Form
               form={form}
               layout="vertical"
@@ -66,7 +66,7 @@ const Login = memo((props) => {
               >
                 <Input placeholder="Password" type="password" />
               </Form.Item>
-              <button className="w-full h-9 text-white bg-greenborder rounded-lg" type="submit">
+              <button className="w-full h-9 text-white bg-greenborder rounded-lg transition-colors hover:bg-btnhover" type="submit">
                 Login
               </button>
               <div className="cursor-pointer flex flex-row justify-between">

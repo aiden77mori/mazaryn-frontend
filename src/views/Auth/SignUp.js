@@ -31,7 +31,7 @@ const SignUp = memo((props) => {
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
           <h4 className="font-bold text-center text-xl page-name">Sign up</h4>
-          <div className="w-1/2">
+          <div className="w-1/2 max-w-md">
             <Form
               form={form}
               layout="vertical"
@@ -97,7 +97,7 @@ const SignUp = memo((props) => {
               >
                 <Input placeholder="Confirm Password" type="password" />
               </Form.Item>
-              <button className="btn w-full h-9 text-white bg-greenborder rounded-lg" type="submit">
+              <button className="btn w-full h-9 text-white bg-greenborder rounded-lg transition-colors hover:bg-btnhover" type="submit">
                 Sign up
               </button>
               <div className="cursor-pointer">
