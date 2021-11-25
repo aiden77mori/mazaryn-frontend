@@ -36,7 +36,7 @@ To contribute to Mazaryn Social, follow these steps:
 4. Push to the original branch: `git push origin <project_name>/<location>`
 5. Create the pull request.
 
-Note: Use this [link](https://www.figma.com/file/1Na0yKOBeh5Y852Px37SD5/Mazaryn-Social) to have a look at the prototype
+Note: Use this [link](https://www.figma.com/file/1Na0yKOBeh5Y852Px37SD5/Mazaryn-Social) to have a look at the UI Design
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
