@@ -22,9 +22,9 @@ const SignUp = memo((props) => {
           <p className="chat-logo text-4xl">
             Chat
             <br />
-            <p className="m-0 text-greenborder font-extrabold text-5xl">
+            <span className="block m-0 text-greenborder font-extrabold text-5xl">
               Hangout
-            </p>
+            </span>
             &#38; more
           </p>
           <img src={process.env.PUBLIC_URL + '/assets/images/woman_illustrations.svg'} alt='' className='right-45 absolute' />
