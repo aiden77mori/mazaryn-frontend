@@ -7,7 +7,7 @@ import GroupIcon from '@material-ui/icons/Group';
 function Profile(){
 
     return(
-        <div className='profile'>
+        <div className='profile mt-20'>
             <figure>
                 <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage'/>
                 <figcaption>
