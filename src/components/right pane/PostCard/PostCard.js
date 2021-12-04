@@ -37,7 +37,7 @@ function PostCard() {
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <p className="cardTitle">Post</p>
         <form className='popupForm' onSubmit={handleSubmit}>
-          <textarea onChange={handleChange} value={post}/>
+          <textarea onChange={handleChange} value={post} style={{resize: 'none'}}/>
           <div className='popupFormBtns'>
             <ClearIcon onClick={closeModal}/>
             <ImageIcon />
