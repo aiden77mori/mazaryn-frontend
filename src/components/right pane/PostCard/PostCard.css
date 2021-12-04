@@ -29,6 +29,7 @@
     height: 80%;
     border: none;
     outline: none;
+    resize: none;
     color: rgba(0, 0, 0, 70%);
 }
 
@@ -36,6 +37,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.popupFormBtns svg {
+    cursor: pointer;
 }
 
 .cardTitle{

@@ -8,7 +8,7 @@ import CheckIcon from '@material-ui/icons/Check';
 
 function PostCard() {
   const [open, setOpen] = useState(false);
-  const [post, setPost] = useState('Type something...');
+  const [post, setPost] = useState('');
   
   function handleChange(e){
     setPost(e.target.value);
@@ -18,7 +18,7 @@ function PostCard() {
     e.preventDefault();
     //post data to the backend and close the popup
     //check if the user has typed in something, if not, do not post to the db
-    if(post === 'Type something...'){
+    if(post.trim().length === 0){
       console.log('Type before submitting');
       return
     }
@@ -37,11 +37,11 @@ function PostCard() {
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <p className="cardTitle">Post</p>
         <form className='popupForm' onSubmit={handleSubmit}>
-          <textarea onChange={handleChange} value={post} style={{resize: 'none'}}/>
+          <textarea onChange={handleChange} placeholder='Type something...' value={post} />
           <div className='popupFormBtns'>
             <ClearIcon onClick={closeModal}/>
             <ImageIcon />
-            <CheckIcon />            
+            <CheckIcon onClick={handleSubmit}/>            
           </div>
         </form>
       </Popup>
