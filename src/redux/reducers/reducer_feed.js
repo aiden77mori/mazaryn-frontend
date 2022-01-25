@@ -1,4 +1,6 @@
-import {POSTS} from '../types'
+import {NOTIFICATIONS} from '../types'
+
+
 
 const INITIAL_STATE ={ 
     data : [
@@ -27,13 +29,16 @@ const INITIAL_STATE ={
     error : null
 }
 
+
+
+
 export default function feedReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
-      case `${POSTS}_started`:
+      case `${NOTIFICATIONS}_started`:
         return { ...state, users: { ...state.users, isFetching: true, err: null } };
-      case `${POSTS}_success`:
-        return { ...state, users: { ...state.users, isFetching: false, data: action.payload } };
-      case `${POSTS}_failed`:
+      case `${NOTIFICATIONS}_success`:
+        return { ...state, users: { ...state.users, isFetching: false, data: action.payload } }; ///post 
+      case `${NOTIFICATIONS}_failed`:
         return { ...state, users: { ...state.users, isFetching: false, err: action.payload } };
       default:
         return state;

@@ -7,6 +7,11 @@ import Posts from '../components/middle pane/post/Posts';
 import Profile from '../components/middle pane/profile/Profile';
 import Feed from '../components/middle pane/feed/Feed';
 import PrivateRoute from '../guards/ProtectedRoutes';
+import Notification from '../components/middle pane/notification';
+import Wallet from '../components/middle pane/wallet'
+import Settings from '../components/middle pane/settings'
+
+
 
 function View(props) {
     return (
@@ -18,8 +23,9 @@ function View(props) {
                     <PrivateRoute exact path='/' component={Feed} />
                     <PrivateRoute exact path='/profile' component={Profile} />
                     <PrivateRoute exact path='/group' component={Posts} />
-                    <PrivateRoute exact path='/notifications' component={FutureUpdate} />
-                    <PrivateRoute exact path='/wallet' component={FutureUpdate} />
+                    <PrivateRoute exact path='/notifications' component={Notification} />
+                    <PrivateRoute exact path='/settings' component={Settings} />
+                    <PrivateRoute exact path='/wallet' component={Wallet} />
                 </section>
                 <RightPane history={props.history} />
             </div>
@@ -27,11 +33,6 @@ function View(props) {
     )
 }
 
-function FutureUpdate() {
-    return (
-        <h3>Yet to come</h3>
-    );
-}
 
 
 export default View

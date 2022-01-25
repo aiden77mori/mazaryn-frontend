@@ -49,7 +49,8 @@ const Posts = (props) => {
     );
 }
 
-function Post(props){
+
+export function Post(props){
     return(
         <div className='w-141 mx-auto mb-10 p-3 bg-white border-1 border-boxborder rounded-2xl'>
             {/* Dynamically set the profile image*/}

@@ -1,5 +1,6 @@
 export const CURRENT_USER = "CURRENT_USER"
 export const POSTS = "POSTS"
+export const NOTIFICATIONS = 'NOTIFICATIONS'
 export const GLOBAL_SUCCESS = "GLOBAL_SUCCESS"
 export const GLOBAL_ERROR = "GLOBAL_ERROR"
 export const GLOBAL_INFO = "GLOBAL_INFO"

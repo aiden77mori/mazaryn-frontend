@@ -16,7 +16,7 @@ const Header = () => {
         <Edit className="mr-1" /> Edit Profile
       </Menu.Item>
       <Menu.Divider />
-      <Menu.Item key="1">
+      <Menu.Item key="1" onClick={'/settings'}>
         <Settings className="mr-1" />Settings
       </Menu.Item>
     </Menu>

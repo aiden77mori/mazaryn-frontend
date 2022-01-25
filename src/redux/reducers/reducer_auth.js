@@ -3,6 +3,8 @@ import {CURRENT_USER} from '../types'
 const INITIAL_STATE = {
     data: null, isFetching: null, err: null
 }
+
+
 export default function authReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
       case `${CURRENT_USER}_started`:
