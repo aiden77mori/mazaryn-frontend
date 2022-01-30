@@ -18,16 +18,12 @@ const SignUp = memo((props) => {
   return (
     <div className="flex bg-white h-screen">
       <div className="w-full flex flex-row bg-lightgreen">
-        <div className="w-2/5 flex flex-col items-center justify-center">
-          <p className="chat-logo text-4xl">
-            Chat
-            <br />
-            <span className="block m-0 text-greenborder font-extrabold text-5xl">
-              Hangout
-            </span>
-            &#38; more
+        <div className="w-2/5 flex flex-col items-center justify-center login-left relative">
+          <p className="relative chat-logo text-white text-6xl z-1 font-bold tracking-wider">
+            Maz<span className="underline">ar</span>y<span className="underline">n</span>
+            <span className="absolute top-full right-0 text-3xl text-black font-bold tracking-normal">social</span>
           </p>
-          <img src={process.env.PUBLIC_URL + '/assets/images/woman_illustrations.svg'} alt='' className='right-45 absolute' />
+          <img src={process.env.PUBLIC_URL + '/assets/images/loginVector.svg'} alt='' className='absolute left-0 bottom-0 w-3/4' />
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
           <h4 className="font-bold text-center text-xl page-name">Sign up</h4>
@@ -97,11 +93,11 @@ const SignUp = memo((props) => {
               >
                 <Input placeholder="Confirm Password" type="password" />
               </Form.Item>
-              <button className="btn w-full h-9 text-white bg-greenborder rounded-lg transition-colors hover:bg-btnhover" type="submit">
-                Sign up
-              </button>
-              <div className="cursor-pointer">
-                <p className="text-green-600 text-center no-underline pt-5" onClick={() => props.history.push('/login')}>Sign in</p>
+              <div className="flex flex-row justify-between items-center flex-wrap">
+                <p className="text-center no-underline pt-5">Already have an account? <span className="text-green-600 cursor-pointer" onClick={() => props.history.push('/login')}>Sign in</span></p>
+                <button className="py-3 px-12 text-white bg-greenborder rounded-3xl transition-colors hover:bg-btnhover" type="submit">
+                  Sign up
+                </button>
               </div>
             </Form>
           </div>

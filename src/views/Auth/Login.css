@@ -12,20 +12,25 @@
 
 .ant-input {
   height: 2.25rem;
-  border-radius: 0.625rem;
+  border: none;
+  border-bottom: 2px solid #C4C4C4;
 }
 
 .ant-input:focus, .ant-input-focused {
-  border-color: #20D493;
+  border-color: #65D4AC;
   border-right-width: 1px !important;
   outline: 0;
   box-shadow: none;
 }
 
 .chat-logo{
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Hind', sans-serif;
 }
 
 .btn{
   font-family: 'Nunito', sans-serif;
+}
+
+.login-left {
+  background: #65D4AC;
 }

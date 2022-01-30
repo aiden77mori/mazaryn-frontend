@@ -9,7 +9,6 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PostCard from './PostCard/PostCard';
 
 const RightPane = (props) => {
-  console.log(props)
   const logout = () => {
     localStorage.removeItem("auth_token")
     props.history.push("/login")
