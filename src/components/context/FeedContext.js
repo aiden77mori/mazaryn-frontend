@@ -4,7 +4,7 @@ export const FeedContext = createContext();
 
 export function FeedProvider({children}){
 
-    const [groups, setGroups] = useState([
+    const [groups, setGroups] = useState([ //hook
         {
             id: 1,
             profileImage: process.env.PUBLIC_URL + '/assets/images/profilePhoto.jpg',

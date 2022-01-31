@@ -4,10 +4,14 @@ import SubjectIcon from '@material-ui/icons/Subject';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 //import './Post.css'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
+ 
+
+  
 const Posts = (props) => {
 
+    // const navigate = Navigate({ to: "/" })
     // let posts = [
     //     {
     //         id: 1,
@@ -37,13 +41,13 @@ const Posts = (props) => {
                 <h3 className='font-bold flex-grow'>Group name</h3>
             </div>
             <div className='pt-10'>
-            {
-                props.posts.data.map( post => {
-                    return(
-                        <Post key={post.id} userName={post.userName} text={post.text}/>
-                    )
-                })
-            }
+                {
+                    props.posts.data.map( post => {
+                        return(
+                            <Post key={post.id} userName={post.userName} text={post.text}/>
+                        )
+                    })
+                }
             </div>
         </div>
     );
@@ -54,7 +58,7 @@ export function Post(props){
     return(
         <div className='w-141 mx-auto mb-10 p-3 bg-white border-1 border-boxborder rounded-2xl'>
             {/* Dynamically set the profile image*/}
-            <section className=''>
+            <section className='text-black'>
                 <figure className='flex flex-row m-0'>
                     <img src={process.env.PUBLIC_URL + '/assets/images/me.jpg'} alt='profileImage' className='w-10 h-10 rounded-full'/>
                     <figcaption className='my-auto m-6 font-bold'>
@@ -62,10 +66,10 @@ export function Post(props){
                     </figcaption>    
                 </figure>
             </section>
-            <section className='text-left w-110 mx-auto'>
+            <section className='text-left text-black w-110 mx-auto'>
                 <p>{props.text}</p>
             </section>
-            <section className='w-110 mx-auto mt-7.5 flex flex-row justify-between'>
+            <section className='w-110 mx-auto mt-7.5 flex flex-row justify-between text-black'>
                 <div className='text-left'>
                     <FavoriteBorderIcon className='mr-5.5'/>
                     <SubjectIcon />

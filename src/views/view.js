@@ -10,7 +10,7 @@ import PrivateRoute from '../guards/ProtectedRoutes';
 import Notification from '../components/middle pane/notification';
 import Wallet from '../components/middle pane/wallet'
 import Settings from '../components/middle pane/settings'
-
+import Interest from '../components/middle pane/interest'
 
 
 function View(props) {
@@ -24,6 +24,7 @@ function View(props) {
                     <PrivateRoute exact path='/profile' component={Profile} />
                     <PrivateRoute exact path='/group' component={Posts} />
                     <PrivateRoute exact path='/notifications' component={Notification} />
+                    <PrivateRoute exact path='/interest' component={Interest} />
                     <PrivateRoute exact path='/settings' component={Settings} />
                     <PrivateRoute exact path='/wallet' component={Wallet} />
                 </section>
