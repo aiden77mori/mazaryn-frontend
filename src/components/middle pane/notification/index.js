@@ -3,13 +3,26 @@
 import { connect } from 'react-redux';
 import { Post } from '../post/Posts';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from 'react-router';
+
+
 
 const Notification = (props) => {
+    let history = useHistory()
+
+    const handleClick = () => {
+        console.log('fff')
+        history.push('/')
+    }
+
+
     return (
         <>
             <div className='relative'>
                 <div className='w-141 mx-auto bg-gradient-to-b from-faintgreen via-faintgreen pt-19 flex flex-row sticky top-0'>
-                    <ArrowBackIcon />
+                    <ArrowBackIcon onClick={handleClick}/>
+
+
                     <div className='flex'>
                         <h3 className='font-bold'>
                             Notification
