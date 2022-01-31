@@ -1,4 +1,37 @@
-.leftPane{
-    width: 29%;
-    height: 100%;
+
+/*brought pver*/
+/* .searchInput{
+    border:none;
+    background-color: #E9D8FD;
+    width: 272px;
+    height: 40px;
+    border-radius: 64px ;
+} */
+
+/*
+    input search
+*/
+.search{
+    height: 2.5rem;
+    width: 15.625rem;
+    border-radius: 64px;
+    padding-left: 10px;
+    margin: 0 auto;
+    background-color: #0AB97A;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchInput{
+    height: 28px;
+    width: 100%;
+    border-style: none;
+    background: none;
+}
+
+.searchIcon{
+    width: 3.125rem;
 }

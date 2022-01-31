@@ -1,26 +1,4 @@
-.rightPane{    
+.leftPane{
     width: 29%;
     height: 100%;
-}
-
-nav{
-    padding-top: 1.625rem;
-}
-
-.rightPaneUl > li{
-    height: 2.75rem;
-    width: 2.75rem;
-    border-radius: 50%;
-    background-color: #0AB97A;
-    margin-bottom: 1.625rem;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.rightPane a {
-    color: #fff;
 }
