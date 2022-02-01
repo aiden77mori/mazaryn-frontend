@@ -8,9 +8,18 @@ function LeftPane(props){
         localStorage.removeItem("auth_token")
         props.history.push("/login")
       }
+
+      let profileImage = process.env.PUBLIC_URL + '/assets/images/profile.svg'
     
       return (
-        <div className=' w-1/4 h-screen flex items-center sticky top-0'>
+        <div className=' w-1/4 h-screen flex flex-col justify-center items-center sticky top-0'>
+          <div className=" w-full flex justify-end pb-10">
+            <div className=" w-1/2">
+              <img className=" h-20 w-20" src={profileImage} alt="profile image"/>
+              <p className=" text-left font-bold pt-2">Teddy</p>
+
+            </div>
+          </div>
           <nav className=' flex justify-end w-full'>
             <ul className="w-3/5">
               <li className=''>
