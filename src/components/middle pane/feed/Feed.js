@@ -3,19 +3,20 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
 import { Post } from '../post/Posts'
+import { makePost } from '../../../redux/actions/content';
 
 
 
 const Feed = (props) => {
 
     const [post, setPost] = useState({
-        text: '',
+        content: '',
         image: null
     });
 
     const handleChange = e => {
         setPost({
-            text: e.target.value
+            content: e.target.value
         })
     }
 
@@ -32,7 +33,7 @@ const Feed = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch()
+        dispatch(makePost(post))
     }, [])
 
     return(
@@ -40,10 +41,10 @@ const Feed = (props) => {
             <div className=' text-left w-141 mx-auto mt-8 sticky top-0 bg-white z-10 pb-4 border-b-1 border-greenborder'>
                 <h2 className=' font-bold'>Mazaryn</h2>
                 <form className=' flex flex-row' onSubmit={handleSubmit}>
-                    <input type="text" name="text" placeholder='type something...' className=" flex-auto focus:outline-none" onChange={handleChange} value={post.text}/>
+                    <input type="text" name="content" placeholder='type something...' className=" flex-auto focus:outline-none" onChange={handleChange} value={post.content}/>
                     <div className=" flex items-center ml-5">
                         <label for="image"><i class="ri-image-line ri-xl"></i></label>
-                        <input id="image" type="file" className=' hidden' onChange={selectedFileHandler}/>
+                        <input id="image" name="image" type="file" className=' hidden' onChange={selectedFileHandler}/>
                     </div>
                     <input type="submit" className=' h-10 w-24 rounded-full text-white bg-greenborder ml-5 font-bold' value="Post"/>
                 </form>
