@@ -10,9 +10,9 @@ function LeftPane(props){
       }
     
       return (
-        <div className=' pt-19 w-1/4 flex items-center'>
-          <nav className=' h-1/2 w-full flex justify-end'>
-            <ul className=" h-full w-3/5">
+        <div className=' w-1/4 h-screen flex items-center sticky top-0'>
+          <nav className=' flex justify-end w-full'>
+            <ul className="w-3/5">
               <li className=''>
                 <Link to='/' className=' flex flex-row items-center text-black focus:bg-greenborder focus:text-white rounded-bl-full rounded-tl-full h-11 pl-5'>
                   <i class="ri-home-3-line pr-3"></i>

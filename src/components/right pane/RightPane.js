@@ -5,7 +5,7 @@ import Search from './search/Search.js';
 const RightPane = () => {
 
   return(
-    <div className=' pt-19 w-1/4 flex flex-col items-center'>
+    <div className=' pt-9 w-1/4 h-screen flex flex-col items-center  sticky top-0'>
         <Search />
     </div>
 );

@@ -16,7 +16,7 @@ import Interest from '../components/middle pane/interest'
 function View(props) {
     return (
         <div id='view'>
-            <Header />
+            {/* <Header /> */}
             <div className='section'>
                 <LeftPane />
                 <section id='middle' className='bg-faintgreen min-w-min'>
