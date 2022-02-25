@@ -3,7 +3,7 @@ import { GLOBAL_ERROR, GLOBAL_SUCCESS } from "../../types";
 
 export const login = (data) => (dispatch) => {
     const callApi = async () => {
-        const url = `${process.env.REACT_APP_BASE_URL}auth-token/token/login/`
+        const url = `${process.env.REACT_APP_BASE_URL}auth-token/jwt/create/`
         try {
             const res = await fetch(url, {
                 method: 'POST',
