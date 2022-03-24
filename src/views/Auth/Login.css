@@ -1,36 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 .ant-form-item-label > label {
   font-weight: 600;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-.page-name{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+.page-name {
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 22px;
 }
 
 .ant-input {
-  height: 2.25rem;
-  border: none;
-  border-bottom: 2px solid #C4C4C4;
+  width: 423px;
+  height: 48px;
+  font-family: "Inter";
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    #d2d2d1;
+  border: 2px solid #d2d2d1;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.ant-input:focus, .ant-input-focused {
-  border-color: #65D4AC;
+.custom_checkbox {
+  font-family: "Inter";
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #4385f5;
   border-right-width: 1px !important;
-  outline: 0;
   box-shadow: none;
 }
 
-.chat-logo{
-  font-family: 'Hind', sans-serif;
+.custom_label {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+}
+.chat-logo {
+  font-family: "Hind", sans-serif;
 }
 
-.btn{
-  font-family: 'Nunito', sans-serif;
+.btn {
+  font-family: "Nunito", sans-serif;
 }
 
-.login-left {
-  background: #65D4AC;
+.forgot_password {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.custom_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
 }

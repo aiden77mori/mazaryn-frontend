@@ -17,18 +17,16 @@ const Login = memo((props) => {
   return (
     <div className="flex bg-white h-screen">
       <div className="w-full flex flex-row">
-        <div className="w-2/5 flex flex-col items-center justify-center login-left relative">
-          <p className="relative chat-logo text-white text-6xl z-1 font-bold tracking-wider">
-            Maz<span className="underline">ar</span>y<span className="underline">n</span>
-            <span className="absolute top-full right-0 text-3xl text-black font-bold tracking-normal">social</span>
-          </p>
-          <img src={process.env.PUBLIC_URL + '/assets/images/loginVector.svg'} alt='' className='absolute left-0 bottom-0 w-3/4' />
+        <div className="w-2/5 ">
+          <img src={process.env.PUBLIC_URL + '/assets/images/loginVector.svg'} alt='' />
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
-          <h4 className="font-bold text-center text-xl page-name">Sign in</h4>
+
           <div className="w-1/2 max-w-md">
+            <h4 className="font-bold mb-7 text-xl page-name">Login</h4>
             <Form
               form={form}
+
               layout="vertical"
               autoComplete="off"
               initialValues={{
@@ -37,7 +35,7 @@ const Login = memo((props) => {
               onFinish={onFinish}
             >
               <Form.Item
-                label="Email"
+                label ={<label className='custom_label'>Email*</label>}
                 name="email"
                 rules={[
                   {
@@ -49,31 +47,33 @@ const Login = memo((props) => {
                   },
                 ]}
               >
-                <Input placeholder="Email Address" />
+                <Input placeholder="Your email address" />
               </Form.Item>
-              <div className="flex flex-row justify-between items-center">
-                <p>Password</p>
-                <p className="text-center pt-5 text-red-400">forgot Password?</p>
-              </div>
+
               <Form.Item
                 name="password"
+                label ={<label className='custom_label'>Password*</label>}
                 rules={[
                   {
                     message: 'Please input your password',
                   },
                 ]}
               >
-                <Input placeholder="Password" type="password" />
+                <Input placeholder="•••••••••••••" type="password" />
               </Form.Item>
-              <div className="flex flex-row justify-between items-center">
-                <div>
-                  <input type="checkbox" /> Remember me
-                </div>
-                <button className="py-3 px-12 text-white bg-greenborder rounded-3xl transition-colors hover:bg-btnhover" type="submit">
+              <div >
+                <p className='text-primary cursor-pointer forgot_password'>Forgot your password?</p>
+              </div>
+              <div className='flex flex-row items-center gap-10'>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white custom_text  h-10 px-15 rounded-full w-40	" type="submit">
                   Login
                 </button>
+                <div>
+                  <p className='text-primary cursor-pointer custom_text' onClick={() => props.history.push('/signup')}>Sign up</p>
+                </div>
               </div>
-                <p className="text-center no-underline pt-5">Don’t have an account? <span className="text-green-600 cursor-pointer" onClick={() => props.history.push('/signup')}>Sign Up</span></p>
+
+              {/* <p className="text-center no-underline pt-5">Don’t have an account? <span className="text-green-600 cursor-pointer" onClick={() => props.history.push('/signup')}>Sign Up</span></p> */}
             </Form>
           </div>
         </div>

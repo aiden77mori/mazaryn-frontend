@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Form, Input } from 'antd';
+import { Form, Input, Checkbox } from 'antd';
 import './Login.css'
 import { connect } from 'react-redux';
 import { signUp } from '../../redux/actions'
@@ -14,20 +14,20 @@ const SignUp = memo((props) => {
       props.history.push('/login')
     }
   };
+  function onChange(e) {
+    console.log(`checked = ${e.target.checked}`);
+  };
 
   return (
     <div className="flex bg-white h-screen">
-      <div className="w-full flex flex-row bg-lightgreen">
-        <div className="w-2/5 flex flex-col items-center justify-center login-left relative">
-          <p className="relative chat-logo text-white text-6xl z-1 font-bold tracking-wider">
-            Maz<span className="underline">ar</span>y<span className="underline">n</span>
-            <span className="absolute top-full right-0 text-3xl text-black font-bold tracking-normal">social</span>
-          </p>
-          <img src={process.env.PUBLIC_URL + '/assets/images/loginVector.svg'} alt='' className='absolute left-0 bottom-0 w-3/4' />
+      <div className="w-full flex flex-row ">
+        <div className="w-2/5 ">
+          <img src={process.env.PUBLIC_URL + '/assets/images/loginVector.svg'} alt='image' />
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
-          <h4 className="font-bold text-center text-xl page-name">Sign up</h4>
           <div className="w-1/2 max-w-md">
+            <h4 className="font-bold mb-7 text-xl page-name">Sign Up</h4>
+
             <Form
               form={form}
               layout="vertical"
@@ -38,7 +38,7 @@ const SignUp = memo((props) => {
               onFinish={onFinish}
             >
               <Form.Item
-                label="Email"
+                label={<label className='custom_label'>Email*</label>}
                 name="email"
                 rules={[
                   {
@@ -53,7 +53,7 @@ const SignUp = memo((props) => {
                 <Input placeholder="Email Address" />
               </Form.Item>
               <Form.Item
-                label="Password"
+                label={<label className='custom_label'>Password*</label>}
                 name="password"
                 rules={[
                   {
@@ -74,7 +74,8 @@ const SignUp = memo((props) => {
               </Form.Item>
 
               <Form.Item
-                label="Confirm Password"
+
+                label={<label className='custom_label'>Confirm Password*</label>}
                 name="password2"
                 rules={[
                   {
@@ -93,11 +94,16 @@ const SignUp = memo((props) => {
               >
                 <Input placeholder="Confirm Password" type="password" />
               </Form.Item>
-              <div className="flex flex-row justify-between items-center flex-wrap">
-                <p className="text-center no-underline pt-5">Already have an account? <span className="text-green-600 cursor-pointer" onClick={() => props.history.push('/login')}>Sign in</span></p>
-                <button className="py-3 px-12 text-white bg-greenborder rounded-3xl transition-colors hover:bg-btnhover" type="submit">
-                  Sign up
+              <div className='my-8'>
+                <Checkbox onChange={onChange} >  <span className='custom_checkbox'>Agree to our terms of service</span> </Checkbox>
+              </div>
+              <div className='flex flex-row items-center gap-10'>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white custom_text  h-10 px-15 rounded-full w-40		" type="submit">
+                  Sign Up
                 </button>
+                <div>
+                  <p className='text-primary cursor-pointer custom_text' onClick={() => props.history.push('/login')}>Login</p>
+                </div>
               </div>
             </Form>
           </div>
