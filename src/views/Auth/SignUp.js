@@ -26,6 +26,7 @@ const SignUp = memo((props) => {
         </div>
         <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
           <div className="w-1/2 max-w-md">
+            <div className='container'>
             <h4 className="font-bold mb-7 text-xl page-name">Sign Up</h4>
 
             <Form
@@ -98,16 +99,18 @@ const SignUp = memo((props) => {
                 <Checkbox onChange={onChange} >  <span className='custom_checkbox'>Agree to our terms of service</span> </Checkbox>
               </div>
               <div className='flex flex-row items-center gap-10'>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white custom_text  h-10 px-15 rounded-full w-40		" type="submit">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white custom_text  h-10 px-15 rounded-lg w-40		" type="submit">
                   Sign Up
                 </button>
                 <div>
                   <p className='text-primary cursor-pointer custom_text' onClick={() => props.history.push('/login')}>Login</p>
                 </div>
               </div>
+              
             </Form>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

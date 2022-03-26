@@ -5,14 +5,23 @@
   font-family: "Nunito", sans-serif;
 }
 
+.container {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.25);
+  border-radius: 20px;
+  padding: 60px;
+  
+}
+
 .page-name {
   font-family: "Poppins";
   font-weight: 900;
   font-size: 22px;
+
 }
 
 .ant-input {
-  width: 423px;
+
   height: 48px;
   font-family: "Inter";
   background: linear-gradient(
