@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Form, Input, Checkbox } from 'antd';
-import './Login.css'
+import './Index.css'
 import { connect } from 'react-redux';
 import { signUp } from '../../redux/actions'
 
@@ -9,23 +9,24 @@ const SignUp = memo((props) => {
 
   const onFinish = async (values) => {
     delete values['password2']
-    const response = await props.signUp(values)
-    if (response?.status === 'successStatus') {
-      props.history.push('/login')
-    }
+    // const response = await props.signUp(values)
+    // if (response?.status === 'successStatus') {
+    //   props.history.push('/login')
+    // }
+    props.history.push('/interest')
   };
   function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
   };
 
   return (
-    <div className="flex bg-white h-screen">
+    <div className=" bg-lightgray  ">
       <div className="w-full flex flex-row ">
-        <div className="w-2/5 ">
+        <div className=" flex-initial w-2/5 ">
           <img src={process.env.PUBLIC_URL + '/assets/images/loginVector.svg'} alt='image' />
         </div>
-        <div className="w-3/5 bg-white py-20 login-card flex flex-col items-center justify-center">
-          <div className="w-1/2 max-w-md">
+        <div className=" flex-initial w-3/5  login-card flex flex-col  mt-32 items-center">
+          <div className="flex-initial w-1/2 max-w-md">
             <div className='container'>
             <h4 className="font-bold mb-7 text-xl page-name">Sign Up</h4>
 

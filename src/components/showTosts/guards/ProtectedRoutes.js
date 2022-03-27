@@ -7,7 +7,8 @@ import { Route, Redirect } from "react-router-dom";
 const PrivateRoute = (props) => {
   const { token } = props;
   if (!token) {
-    return <Redirect to="/login" />;
+    // return <Redirect to="/login" />;
+    return <Route {...props} />;
   }
 
   return <Route {...props} />;

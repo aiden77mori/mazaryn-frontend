@@ -9,7 +9,7 @@ const Buff = (props) => {
       width="44"
       height="44"
       viewBox="0 0 44 44"
-      stroke="#0AB97A">
+      stroke="#4385f5">
       <g fill="none" fillRule="evenodd" strokeWidth="2">
         <circle cx="22" cy="22" r="1">
           <animate
@@ -61,12 +61,12 @@ const Buff = (props) => {
 };
 
 Buff.defaultProps = {
-  color: '#0AB97A',
+  color: '#4385f5',
 };
 
 const Oval = (props) => {
   return (
-    <svg {...props} width="38" height="38" viewBox="0 0 38 38" stroke="#0AB97A">
+    <svg {...props} width="38" height="38" viewBox="0 0 38 38" stroke="#4385f5">
       <g fill="none" fillRule="evenodd">
         <g transform="translate(1 1)" strokeWidth="2">
           <circle strokeOpacity=".2" cx="18" cy="18" r="18" />
@@ -86,7 +86,7 @@ const Oval = (props) => {
   );
 };
 Oval.defaultProps = {
-  color: '#0AB97A',
+  color: '#4385f5',
 };
 Oval.propTypes = {
   color: PropTypes.string,

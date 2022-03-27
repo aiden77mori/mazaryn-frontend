@@ -9,6 +9,9 @@ import View from './views/view';
 
 const LoginScreen = React.lazy(() => import('./views/Auth/Login'))
 const SignUpScreen = React.lazy(() => import('./views/Auth/SignUp'))
+const ForgotPasswordScreen = React.lazy(() => import('./views/Auth/ForgotPassword'))
+const InterestScreen = React.lazy(() => import('./views/Auth/Interest'))
+
 
 const App = (props) => {
 
@@ -20,6 +23,8 @@ const App = (props) => {
           <Switch>
             <Route exact path='/login' component={LoginScreen} />
             <Route exact path='/signup' component={SignUpScreen} />
+            <Route exact path='/forgotpassword' component={ForgotPasswordScreen} />
+            <Route exact path='/interest' component={InterestScreen} />
             <Route component={View} />
             {/* <View /> */}
           </Switch>

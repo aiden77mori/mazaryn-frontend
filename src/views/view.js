@@ -6,7 +6,7 @@ import RightPane from '../components/right pane/RightPane.js';
 import Posts from '../components/middle pane/post/Posts';
 import Profile from '../components/middle pane/profile/Profile';
 import Feed from '../components/middle pane/feed/Feed';
-import PrivateRoute from '../guards/ProtectedRoutes';
+import PrivateRoute from '../components/showTosts/guards/ProtectedRoutes';
 import Notification from '../components/middle pane/notification';
 import Wallet from '../components/middle pane/wallet'
 import Settings from '../components/middle pane/settings'

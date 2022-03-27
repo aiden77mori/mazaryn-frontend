@@ -10,18 +10,36 @@
   box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.25);
   border-radius: 20px;
   padding: 60px;
-  
+}
+
+.intrest_container {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.25);
+  border-radius: 20px;
+  padding: 60px;
+  align-items: center;
+  max-width: 1162px;
+}
+
+.custom_block {
+  max-width: 1162px;
+}
+
+.subtitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: #5d5f63;
 }
 
 .page-name {
   font-family: "Poppins";
   font-weight: 900;
   font-size: 22px;
-
 }
 
 .ant-input {
-
   height: 48px;
   font-family: "Inter";
   background: linear-gradient(
@@ -33,10 +51,33 @@
   border: 2px solid #d2d2d1;
   box-sizing: border-box;
   border-radius: 10px;
+  height: 48px;
+  font-family: "Inter";
+}
+
+input {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    #d2d2d1;
+  border: 2px solid #d2d2d1;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4385f5;
 }
 
 .custom_checkbox {
   font-family: "Inter";
+}
+
+.custom_width{
+  width: 60%;
 }
 
 .ant-input:focus,
@@ -71,4 +112,33 @@
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
+}
+
+.custom_button {
+  box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.12);
+  border-radius: 20px;
+  padding: 26px 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.custom_button2 {
+  box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.12);
+  border-radius: 20px;
+  padding: 26px 30px;
+  background: #4385f5;
+  transition: 0.3s;
+  color: white;
+  cursor: pointer;
+}
+
+.button_text {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.custom_div {
+  margin-left: -17px;
 }

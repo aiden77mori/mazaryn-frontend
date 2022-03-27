@@ -21,6 +21,7 @@ module.exports = {
       faintgreen: '#F9FFFD',
       boxborder: '#A3FBDB',
       btnhover: '#037D51',
+      lightgray: '#FAFAFA',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
